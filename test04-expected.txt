@@ -1,0 +1,1072 @@
+[This tests insert, delete, preorder, size, and clear]
+initialize: height-difference = 1, bounding-box = [(0.0,0.0),(10.0,10.0)]
+insert(ATL): successful {Atlanta, (1.0,5.0)}
+Preorder list:
+  (x=1.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+Tree structure:
+  (x=1.0 ht=0) ATL: (1.0,5.0)
+insert(BWI): successful {Baltimore, (8.0,8.0)}
+Preorder list:
+  (x=1.0 ht=1) ATL: (1.0,5.0)
+  []
+  (y=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  (x=1.0 ht=1) ATL: (1.0,5.0)
+  | (y=8.0 ht=0) BWI: (8.0,8.0)
+[This results in rebuilding the subtree rooted at ATL]
+insert(DCA): successful {Washington, (6.0,7.0)}
+Preorder list:
+  (x=6.0 ht=1) DCA: (6.0,7.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=0) ATL: (1.0,5.0)
+  (x=6.0 ht=1) DCA: (6.0,7.0)
+  | (y=8.0 ht=0) BWI: (8.0,8.0)
+insert(DFW): successful {Dallas-Fort Worth, (3.0,8.0)}
+Preorder list:
+  (x=6.0 ht=2) DCA: (6.0,7.0)
+  (y=5.0 ht=1) ATL: (1.0,5.0)
+  []
+  (x=3.0 ht=0) DFW: (3.0,8.0)
+  []
+  []
+  (y=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=1) ATL: (1.0,5.0)
+  | | (x=3.0 ht=0) DFW: (3.0,8.0)
+  (x=6.0 ht=2) DCA: (6.0,7.0)
+  | (y=8.0 ht=0) BWI: (8.0,8.0)
+insert(IAD): successful {Dulles, (3.0,4.0)}
+Preorder list:
+  (x=6.0 ht=2) DCA: (6.0,7.0)
+  (y=5.0 ht=1) ATL: (1.0,5.0)
+  (x=3.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (x=3.0 ht=0) DFW: (3.0,8.0)
+  []
+  []
+  (y=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | (x=3.0 ht=0) IAD: (3.0,4.0)
+  | (y=5.0 ht=1) ATL: (1.0,5.0)
+  | | (x=3.0 ht=0) DFW: (3.0,8.0)
+  (x=6.0 ht=2) DCA: (6.0,7.0)
+  | (y=8.0 ht=0) BWI: (8.0,8.0)
+insert(JFK): successful {New York, (9.0,3.0)}
+Preorder list:
+  (x=6.0 ht=2) DCA: (6.0,7.0)
+  (y=5.0 ht=1) ATL: (1.0,5.0)
+  (x=3.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (x=3.0 ht=0) DFW: (3.0,8.0)
+  []
+  []
+  (y=8.0 ht=1) BWI: (8.0,8.0)
+  (y=3.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  []
+Tree structure:
+  | | (x=3.0 ht=0) IAD: (3.0,4.0)
+  | (y=5.0 ht=1) ATL: (1.0,5.0)
+  | | (x=3.0 ht=0) DFW: (3.0,8.0)
+  (x=6.0 ht=2) DCA: (6.0,7.0)
+  | | (y=3.0 ht=0) JFK: (9.0,3.0)
+  | (y=8.0 ht=1) BWI: (8.0,8.0)
+insert(LAX): successful {Los Angeles, (4.0,2.0)}
+Preorder list:
+  (x=6.0 ht=3) DCA: (6.0,7.0)
+  (y=5.0 ht=2) ATL: (1.0,5.0)
+  (x=3.0 ht=1) IAD: (3.0,4.0)
+  []
+  (y=2.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (x=3.0 ht=0) DFW: (3.0,8.0)
+  []
+  []
+  (y=8.0 ht=1) BWI: (8.0,8.0)
+  (y=3.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  []
+Tree structure:
+  | | (x=3.0 ht=1) IAD: (3.0,4.0)
+  | | | (y=2.0 ht=0) LAX: (4.0,2.0)
+  | (y=5.0 ht=2) ATL: (1.0,5.0)
+  | | (x=3.0 ht=0) DFW: (3.0,8.0)
+  (x=6.0 ht=3) DCA: (6.0,7.0)
+  | | (y=3.0 ht=0) JFK: (9.0,3.0)
+  | (y=8.0 ht=1) BWI: (8.0,8.0)
+insert(ORD): successful {Chicago, (2.0,6.0)}
+Preorder list:
+  (x=6.0 ht=3) DCA: (6.0,7.0)
+  (y=5.0 ht=2) ATL: (1.0,5.0)
+  (x=3.0 ht=1) IAD: (3.0,4.0)
+  []
+  (y=2.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (x=3.0 ht=1) DFW: (3.0,8.0)
+  (y=6.0 ht=0) ORD: (2.0,6.0)
+  []
+  []
+  []
+  (y=8.0 ht=1) BWI: (8.0,8.0)
+  (y=3.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  []
+Tree structure:
+  | | (x=3.0 ht=1) IAD: (3.0,4.0)
+  | | | (y=2.0 ht=0) LAX: (4.0,2.0)
+  | (y=5.0 ht=2) ATL: (1.0,5.0)
+  | | | (y=6.0 ht=0) ORD: (2.0,6.0)
+  | | (x=3.0 ht=1) DFW: (3.0,8.0)
+  (x=6.0 ht=3) DCA: (6.0,7.0)
+  | | (y=3.0 ht=0) JFK: (9.0,3.0)
+  | (y=8.0 ht=1) BWI: (8.0,8.0)
+insert(SEA): successful {Seattle, (5.0,5.0)}
+Preorder list:
+  (x=6.0 ht=3) DCA: (6.0,7.0)
+  (y=5.0 ht=2) ATL: (1.0,5.0)
+  (x=3.0 ht=1) IAD: (3.0,4.0)
+  []
+  (y=2.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (x=3.0 ht=1) DFW: (3.0,8.0)
+  (y=6.0 ht=0) ORD: (2.0,6.0)
+  []
+  []
+  (y=5.0 ht=0) SEA: (5.0,5.0)
+  []
+  []
+  (y=8.0 ht=1) BWI: (8.0,8.0)
+  (y=3.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  []
+Tree structure:
+  | | (x=3.0 ht=1) IAD: (3.0,4.0)
+  | | | (y=2.0 ht=0) LAX: (4.0,2.0)
+  | (y=5.0 ht=2) ATL: (1.0,5.0)
+  | | | (y=6.0 ht=0) ORD: (2.0,6.0)
+  | | (x=3.0 ht=1) DFW: (3.0,8.0)
+  | | | (y=5.0 ht=0) SEA: (5.0,5.0)
+  (x=6.0 ht=3) DCA: (6.0,7.0)
+  | | (y=3.0 ht=0) JFK: (9.0,3.0)
+  | (y=8.0 ht=1) BWI: (8.0,8.0)
+[This results in rebuilding the subtree rooted at DCA]
+insert(SFO): successful {San Francisco, (1.0,9.0)}
+Preorder list:
+  (x=4.0 ht=3) LAX: (4.0,2.0)
+  (y=6.0 ht=2) ORD: (2.0,6.0)
+  (y=5.0 ht=1) ATL: (1.0,5.0)
+  (y=4.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  []
+  (x=3.0 ht=1) DFW: (3.0,8.0)
+  (y=9.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  []
+  (y=7.0 ht=2) DCA: (6.0,7.0)
+  (y=5.0 ht=1) SEA: (5.0,5.0)
+  (x=9.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  []
+  (x=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | | (y=4.0 ht=0) IAD: (3.0,4.0)
+  | | (y=5.0 ht=1) ATL: (1.0,5.0)
+  | (y=6.0 ht=2) ORD: (2.0,6.0)
+  | | | (y=9.0 ht=0) SFO: (1.0,9.0)
+  | | (x=3.0 ht=1) DFW: (3.0,8.0)
+  (x=4.0 ht=3) LAX: (4.0,2.0)
+  | | | (x=9.0 ht=0) JFK: (9.0,3.0)
+  | | (y=5.0 ht=1) SEA: (5.0,5.0)
+  | (y=7.0 ht=2) DCA: (6.0,7.0)
+  | | (x=8.0 ht=0) BWI: (8.0,8.0)
+[This causes an duplicate point insertion exception]
+insert(DUP): failure due to exception: "Attempt to insert a duplicate point"
+Preorder list:
+  (x=4.0 ht=3) LAX: (4.0,2.0)
+  (y=6.0 ht=2) ORD: (2.0,6.0)
+  (y=5.0 ht=1) ATL: (1.0,5.0)
+  (y=4.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  []
+  (x=3.0 ht=1) DFW: (3.0,8.0)
+  (y=9.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  []
+  (y=7.0 ht=2) DCA: (6.0,7.0)
+  (y=5.0 ht=1) SEA: (5.0,5.0)
+  (x=9.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  []
+  (x=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | | (y=4.0 ht=0) IAD: (3.0,4.0)
+  | | (y=5.0 ht=1) ATL: (1.0,5.0)
+  | (y=6.0 ht=2) ORD: (2.0,6.0)
+  | | | (y=9.0 ht=0) SFO: (1.0,9.0)
+  | | (x=3.0 ht=1) DFW: (3.0,8.0)
+  (x=4.0 ht=3) LAX: (4.0,2.0)
+  | | | (x=9.0 ht=0) JFK: (9.0,3.0)
+  | | (y=5.0 ht=1) SEA: (5.0,5.0)
+  | (y=7.0 ht=2) DCA: (6.0,7.0)
+  | | (x=8.0 ht=0) BWI: (8.0,8.0)
+size: 10
+[This results in taking a replacement (SFO) from the left subtree]
+delete(DFW): successful
+Preorder list:
+  (x=4.0 ht=3) LAX: (4.0,2.0)
+  (y=6.0 ht=2) ORD: (2.0,6.0)
+  (y=5.0 ht=1) ATL: (1.0,5.0)
+  (y=4.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  []
+  (x=1.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  (y=7.0 ht=2) DCA: (6.0,7.0)
+  (y=5.0 ht=1) SEA: (5.0,5.0)
+  (x=9.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  []
+  (x=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | | (y=4.0 ht=0) IAD: (3.0,4.0)
+  | | (y=5.0 ht=1) ATL: (1.0,5.0)
+  | (y=6.0 ht=2) ORD: (2.0,6.0)
+  | | (x=1.0 ht=0) SFO: (1.0,9.0)
+  (x=4.0 ht=3) LAX: (4.0,2.0)
+  | | | (x=9.0 ht=0) JFK: (9.0,3.0)
+  | | (y=5.0 ht=1) SEA: (5.0,5.0)
+  | (y=7.0 ht=2) DCA: (6.0,7.0)
+  | | (x=8.0 ht=0) BWI: (8.0,8.0)
+[This results in taking a replacement (SEA) from the right subtree and then taking a replacement (JFK) from the left subtree]
+delete(LAX): successful
+Preorder list:
+  (x=5.0 ht=3) SEA: (5.0,5.0)
+  (y=6.0 ht=2) ORD: (2.0,6.0)
+  (y=5.0 ht=1) ATL: (1.0,5.0)
+  (y=4.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  []
+  (x=1.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  (y=7.0 ht=1) DCA: (6.0,7.0)
+  (y=3.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  (x=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | | (y=4.0 ht=0) IAD: (3.0,4.0)
+  | | (y=5.0 ht=1) ATL: (1.0,5.0)
+  | (y=6.0 ht=2) ORD: (2.0,6.0)
+  | | (x=1.0 ht=0) SFO: (1.0,9.0)
+  (x=5.0 ht=3) SEA: (5.0,5.0)
+  | | (y=3.0 ht=0) JFK: (9.0,3.0)
+  | (y=7.0 ht=1) DCA: (6.0,7.0)
+  | | (x=8.0 ht=0) BWI: (8.0,8.0)
+[This results in taking a replacement (SFO) from the right subtree and then rebuilding the subtree rooted at SFO]
+delete(ORD): successful
+Preorder list:
+  (x=5.0 ht=2) SEA: (5.0,5.0)
+  (y=5.0 ht=1) ATL: (1.0,5.0)
+  (x=3.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (x=1.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  (y=7.0 ht=1) DCA: (6.0,7.0)
+  (y=3.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  (x=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | (x=3.0 ht=0) IAD: (3.0,4.0)
+  | (y=5.0 ht=1) ATL: (1.0,5.0)
+  | | (x=1.0 ht=0) SFO: (1.0,9.0)
+  (x=5.0 ht=2) SEA: (5.0,5.0)
+  | | (y=3.0 ht=0) JFK: (9.0,3.0)
+  | (y=7.0 ht=1) DCA: (6.0,7.0)
+  | | (x=8.0 ht=0) BWI: (8.0,8.0)
+[This results in taking a replacement (DCA) from the right subtree and then taking a replacement (BWI) from the right subtree]
+delete(SEA): successful
+Preorder list:
+  (x=6.0 ht=2) DCA: (6.0,7.0)
+  (y=5.0 ht=1) ATL: (1.0,5.0)
+  (x=3.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (x=1.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  (y=8.0 ht=1) BWI: (8.0,8.0)
+  (y=3.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  []
+Tree structure:
+  | | (x=3.0 ht=0) IAD: (3.0,4.0)
+  | (y=5.0 ht=1) ATL: (1.0,5.0)
+  | | (x=1.0 ht=0) SFO: (1.0,9.0)
+  (x=6.0 ht=2) DCA: (6.0,7.0)
+  | | (y=3.0 ht=0) JFK: (9.0,3.0)
+  | (y=8.0 ht=1) BWI: (8.0,8.0)
+delete(IAD): successful
+Preorder list:
+  (x=6.0 ht=2) DCA: (6.0,7.0)
+  (y=5.0 ht=1) ATL: (1.0,5.0)
+  []
+  (x=1.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  (y=8.0 ht=1) BWI: (8.0,8.0)
+  (y=3.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=1) ATL: (1.0,5.0)
+  | | (x=1.0 ht=0) SFO: (1.0,9.0)
+  (x=6.0 ht=2) DCA: (6.0,7.0)
+  | | (y=3.0 ht=0) JFK: (9.0,3.0)
+  | (y=8.0 ht=1) BWI: (8.0,8.0)
+[This results in taking a replacement (BWI) from the right subtree and then taking a replacement (JFK) from the left subtree]
+delete(DCA): successful
+Preorder list:
+  (x=8.0 ht=2) BWI: (8.0,8.0)
+  (y=5.0 ht=1) ATL: (1.0,5.0)
+  []
+  (x=1.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  (y=3.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=1) ATL: (1.0,5.0)
+  | | (x=1.0 ht=0) SFO: (1.0,9.0)
+  (x=8.0 ht=2) BWI: (8.0,8.0)
+  | (y=3.0 ht=0) JFK: (9.0,3.0)
+[This results in rebuilding the subtree rooted at BWI]
+delete(JFK): successful
+Preorder list:
+  (x=1.0 ht=1) SFO: (1.0,9.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=0) ATL: (1.0,5.0)
+  (x=1.0 ht=1) SFO: (1.0,9.0)
+  | (y=8.0 ht=0) BWI: (8.0,8.0)
+[This causes an nonexistent point deletion exception]
+delete-point((6.0,7.0)): failure due to exception: "Attempt to delete a nonexistent point"
+Preorder list:
+  (x=1.0 ht=1) SFO: (1.0,9.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=0) ATL: (1.0,5.0)
+  (x=1.0 ht=1) SFO: (1.0,9.0)
+  | (y=8.0 ht=0) BWI: (8.0,8.0)
+[This causes an nonexistent point deletion exception]
+delete-point((3.0,9.0)): failure due to exception: "Attempt to delete a nonexistent point"
+Preorder list:
+  (x=1.0 ht=1) SFO: (1.0,9.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=0) ATL: (1.0,5.0)
+  (x=1.0 ht=1) SFO: (1.0,9.0)
+  | (y=8.0 ht=0) BWI: (8.0,8.0)
+[This causes an nonexistent point deletion exception]
+delete-point((-1.0,-1.0)): failure due to exception: "Attempt to delete a nonexistent point"
+Preorder list:
+  (x=1.0 ht=1) SFO: (1.0,9.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=0) ATL: (1.0,5.0)
+  (x=1.0 ht=1) SFO: (1.0,9.0)
+  | (y=8.0 ht=0) BWI: (8.0,8.0)
+[This results in taking a replacement (BWI) from the right subtree]
+delete(SFO): successful
+Preorder list:
+  (x=8.0 ht=1) BWI: (8.0,8.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=0) ATL: (1.0,5.0)
+  (x=8.0 ht=1) BWI: (8.0,8.0)
+[This results in taking a replacement (ATL) from the left subtree]
+delete(BWI): successful
+Preorder list:
+  (x=1.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+Tree structure:
+  (x=1.0 ht=0) ATL: (1.0,5.0)
+delete(ATL): successful
+Preorder list:
+  []
+Tree structure:
+size: 0
+clear: successful
+insert(ATL): successful {Atlanta, (1.0,5.0)}
+Preorder list:
+  (x=1.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+Tree structure:
+  (x=1.0 ht=0) ATL: (1.0,5.0)
+insert(BWI): successful {Baltimore, (8.0,8.0)}
+Preorder list:
+  (x=1.0 ht=1) ATL: (1.0,5.0)
+  []
+  (y=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  (x=1.0 ht=1) ATL: (1.0,5.0)
+  | (y=8.0 ht=0) BWI: (8.0,8.0)
+[This results in rebuilding the subtree rooted at ATL]
+insert(ORD): successful {Chicago, (2.0,6.0)}
+Preorder list:
+  (x=2.0 ht=1) ORD: (2.0,6.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=0) ATL: (1.0,5.0)
+  (x=2.0 ht=1) ORD: (2.0,6.0)
+  | (y=8.0 ht=0) BWI: (8.0,8.0)
+insert(DFW): successful {Dallas-Fort Worth, (3.0,8.0)}
+Preorder list:
+  (x=2.0 ht=2) ORD: (2.0,6.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=8.0 ht=1) BWI: (8.0,8.0)
+  []
+  (x=3.0 ht=0) DFW: (3.0,8.0)
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=0) ATL: (1.0,5.0)
+  (x=2.0 ht=2) ORD: (2.0,6.0)
+  | (y=8.0 ht=1) BWI: (8.0,8.0)
+  | | (x=3.0 ht=0) DFW: (3.0,8.0)
+insert(IAD): successful {Dulles, (3.0,4.0)}
+Preorder list:
+  (x=2.0 ht=2) ORD: (2.0,6.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=8.0 ht=1) BWI: (8.0,8.0)
+  (x=3.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (x=3.0 ht=0) DFW: (3.0,8.0)
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=0) ATL: (1.0,5.0)
+  (x=2.0 ht=2) ORD: (2.0,6.0)
+  | | (x=3.0 ht=0) IAD: (3.0,4.0)
+  | (y=8.0 ht=1) BWI: (8.0,8.0)
+  | | (x=3.0 ht=0) DFW: (3.0,8.0)
+[This results in rebuilding the subtree rooted at ORD]
+insert(LAX): successful {Los Angeles, (4.0,2.0)}
+Preorder list:
+  (x=3.0 ht=2) DFW: (3.0,8.0)
+  (y=5.0 ht=1) ATL: (1.0,5.0)
+  (y=4.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (y=6.0 ht=0) ORD: (2.0,6.0)
+  []
+  []
+  (y=8.0 ht=1) BWI: (8.0,8.0)
+  (y=2.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  []
+Tree structure:
+  | | (y=4.0 ht=0) IAD: (3.0,4.0)
+  | (y=5.0 ht=1) ATL: (1.0,5.0)
+  | | (y=6.0 ht=0) ORD: (2.0,6.0)
+  (x=3.0 ht=2) DFW: (3.0,8.0)
+  | | (y=2.0 ht=0) LAX: (4.0,2.0)
+  | (y=8.0 ht=1) BWI: (8.0,8.0)
+[This results in rebuilding the subtree rooted at BWI]
+insert(JFK): successful {New York, (9.0,3.0)}
+Preorder list:
+  (x=3.0 ht=2) DFW: (3.0,8.0)
+  (y=5.0 ht=1) ATL: (1.0,5.0)
+  (y=4.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (y=6.0 ht=0) ORD: (2.0,6.0)
+  []
+  []
+  (y=3.0 ht=1) JFK: (9.0,3.0)
+  (x=4.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (x=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | (y=4.0 ht=0) IAD: (3.0,4.0)
+  | (y=5.0 ht=1) ATL: (1.0,5.0)
+  | | (y=6.0 ht=0) ORD: (2.0,6.0)
+  (x=3.0 ht=2) DFW: (3.0,8.0)
+  | | (x=4.0 ht=0) LAX: (4.0,2.0)
+  | (y=3.0 ht=1) JFK: (9.0,3.0)
+  | | (x=8.0 ht=0) BWI: (8.0,8.0)
+insert(SFO): successful {San Francisco, (1.0,9.0)}
+Preorder list:
+  (x=3.0 ht=3) DFW: (3.0,8.0)
+  (y=5.0 ht=2) ATL: (1.0,5.0)
+  (y=4.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (y=6.0 ht=1) ORD: (2.0,6.0)
+  []
+  (y=9.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  (y=3.0 ht=1) JFK: (9.0,3.0)
+  (x=4.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (x=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | (y=4.0 ht=0) IAD: (3.0,4.0)
+  | (y=5.0 ht=2) ATL: (1.0,5.0)
+  | | (y=6.0 ht=1) ORD: (2.0,6.0)
+  | | | (y=9.0 ht=0) SFO: (1.0,9.0)
+  (x=3.0 ht=3) DFW: (3.0,8.0)
+  | | (x=4.0 ht=0) LAX: (4.0,2.0)
+  | (y=3.0 ht=1) JFK: (9.0,3.0)
+  | | (x=8.0 ht=0) BWI: (8.0,8.0)
+insert(SEA): successful {Seattle, (5.0,5.0)}
+Preorder list:
+  (x=3.0 ht=3) DFW: (3.0,8.0)
+  (y=5.0 ht=2) ATL: (1.0,5.0)
+  (y=4.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (y=6.0 ht=1) ORD: (2.0,6.0)
+  []
+  (y=9.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  (y=3.0 ht=2) JFK: (9.0,3.0)
+  (x=4.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (x=8.0 ht=1) BWI: (8.0,8.0)
+  (y=5.0 ht=0) SEA: (5.0,5.0)
+  []
+  []
+  []
+Tree structure:
+  | | (y=4.0 ht=0) IAD: (3.0,4.0)
+  | (y=5.0 ht=2) ATL: (1.0,5.0)
+  | | (y=6.0 ht=1) ORD: (2.0,6.0)
+  | | | (y=9.0 ht=0) SFO: (1.0,9.0)
+  (x=3.0 ht=3) DFW: (3.0,8.0)
+  | | (x=4.0 ht=0) LAX: (4.0,2.0)
+  | (y=3.0 ht=2) JFK: (9.0,3.0)
+  | | | (y=5.0 ht=0) SEA: (5.0,5.0)
+  | | (x=8.0 ht=1) BWI: (8.0,8.0)
+[This results in rebuilding the subtree rooted at BWI]
+insert(DCA): successful {Washington, (6.0,7.0)}
+Preorder list:
+  (x=3.0 ht=3) DFW: (3.0,8.0)
+  (y=5.0 ht=2) ATL: (1.0,5.0)
+  (y=4.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (y=6.0 ht=1) ORD: (2.0,6.0)
+  []
+  (y=9.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  (y=3.0 ht=2) JFK: (9.0,3.0)
+  (x=4.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (x=6.0 ht=1) DCA: (6.0,7.0)
+  (y=5.0 ht=0) SEA: (5.0,5.0)
+  []
+  []
+  (y=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | (y=4.0 ht=0) IAD: (3.0,4.0)
+  | (y=5.0 ht=2) ATL: (1.0,5.0)
+  | | (y=6.0 ht=1) ORD: (2.0,6.0)
+  | | | (y=9.0 ht=0) SFO: (1.0,9.0)
+  (x=3.0 ht=3) DFW: (3.0,8.0)
+  | | (x=4.0 ht=0) LAX: (4.0,2.0)
+  | (y=3.0 ht=2) JFK: (9.0,3.0)
+  | | | (y=5.0 ht=0) SEA: (5.0,5.0)
+  | | (x=6.0 ht=1) DCA: (6.0,7.0)
+  | | | (y=8.0 ht=0) BWI: (8.0,8.0)
+size: 10
+[This results in taking a replacement (SFO) from the right subtree]
+delete(ORD): successful
+Preorder list:
+  (x=3.0 ht=3) DFW: (3.0,8.0)
+  (y=5.0 ht=1) ATL: (1.0,5.0)
+  (y=4.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (y=9.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  (y=3.0 ht=2) JFK: (9.0,3.0)
+  (x=4.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (x=6.0 ht=1) DCA: (6.0,7.0)
+  (y=5.0 ht=0) SEA: (5.0,5.0)
+  []
+  []
+  (y=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | (y=4.0 ht=0) IAD: (3.0,4.0)
+  | (y=5.0 ht=1) ATL: (1.0,5.0)
+  | | (y=9.0 ht=0) SFO: (1.0,9.0)
+  (x=3.0 ht=3) DFW: (3.0,8.0)
+  | | (x=4.0 ht=0) LAX: (4.0,2.0)
+  | (y=3.0 ht=2) JFK: (9.0,3.0)
+  | | | (y=5.0 ht=0) SEA: (5.0,5.0)
+  | | (x=6.0 ht=1) DCA: (6.0,7.0)
+  | | | (y=8.0 ht=0) BWI: (8.0,8.0)
+[This results in taking a replacement (LAX) from the right subtree and then rebuilding the subtree rooted at JFK]
+delete(DFW): successful
+Preorder list:
+  (x=4.0 ht=3) LAX: (4.0,2.0)
+  (y=5.0 ht=1) ATL: (1.0,5.0)
+  (y=4.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (y=9.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  (y=7.0 ht=2) DCA: (6.0,7.0)
+  (y=5.0 ht=1) SEA: (5.0,5.0)
+  (x=9.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  []
+  (x=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | (y=4.0 ht=0) IAD: (3.0,4.0)
+  | (y=5.0 ht=1) ATL: (1.0,5.0)
+  | | (y=9.0 ht=0) SFO: (1.0,9.0)
+  (x=4.0 ht=3) LAX: (4.0,2.0)
+  | | | (x=9.0 ht=0) JFK: (9.0,3.0)
+  | | (y=5.0 ht=1) SEA: (5.0,5.0)
+  | (y=7.0 ht=2) DCA: (6.0,7.0)
+  | | (x=8.0 ht=0) BWI: (8.0,8.0)
+delete(SFO): successful
+Preorder list:
+  (x=4.0 ht=3) LAX: (4.0,2.0)
+  (y=5.0 ht=1) ATL: (1.0,5.0)
+  (y=4.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  []
+  (y=7.0 ht=2) DCA: (6.0,7.0)
+  (y=5.0 ht=1) SEA: (5.0,5.0)
+  (x=9.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  []
+  (x=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | (y=4.0 ht=0) IAD: (3.0,4.0)
+  | (y=5.0 ht=1) ATL: (1.0,5.0)
+  (x=4.0 ht=3) LAX: (4.0,2.0)
+  | | | (x=9.0 ht=0) JFK: (9.0,3.0)
+  | | (y=5.0 ht=1) SEA: (5.0,5.0)
+  | (y=7.0 ht=2) DCA: (6.0,7.0)
+  | | (x=8.0 ht=0) BWI: (8.0,8.0)
+[This results in taking a replacement (SEA) from the right subtree and then taking a replacement (JFK) from the left subtree]
+delete(LAX): successful
+Preorder list:
+  (x=5.0 ht=2) SEA: (5.0,5.0)
+  (y=5.0 ht=1) ATL: (1.0,5.0)
+  (y=4.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  []
+  (y=7.0 ht=1) DCA: (6.0,7.0)
+  (y=3.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  (x=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | (y=4.0 ht=0) IAD: (3.0,4.0)
+  | (y=5.0 ht=1) ATL: (1.0,5.0)
+  (x=5.0 ht=2) SEA: (5.0,5.0)
+  | | (y=3.0 ht=0) JFK: (9.0,3.0)
+  | (y=7.0 ht=1) DCA: (6.0,7.0)
+  | | (x=8.0 ht=0) BWI: (8.0,8.0)
+delete(IAD): successful
+Preorder list:
+  (x=5.0 ht=2) SEA: (5.0,5.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=7.0 ht=1) DCA: (6.0,7.0)
+  (y=3.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  (x=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=0) ATL: (1.0,5.0)
+  (x=5.0 ht=2) SEA: (5.0,5.0)
+  | | (y=3.0 ht=0) JFK: (9.0,3.0)
+  | (y=7.0 ht=1) DCA: (6.0,7.0)
+  | | (x=8.0 ht=0) BWI: (8.0,8.0)
+[This results in taking a replacement (BWI) from the right subtree]
+delete(DCA): successful
+Preorder list:
+  (x=5.0 ht=2) SEA: (5.0,5.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=8.0 ht=1) BWI: (8.0,8.0)
+  (y=3.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=0) ATL: (1.0,5.0)
+  (x=5.0 ht=2) SEA: (5.0,5.0)
+  | | (y=3.0 ht=0) JFK: (9.0,3.0)
+  | (y=8.0 ht=1) BWI: (8.0,8.0)
+delete(JFK): successful
+Preorder list:
+  (x=5.0 ht=1) SEA: (5.0,5.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=0) ATL: (1.0,5.0)
+  (x=5.0 ht=1) SEA: (5.0,5.0)
+  | (y=8.0 ht=0) BWI: (8.0,8.0)
+delete(BWI): successful
+Preorder list:
+  (x=5.0 ht=1) SEA: (5.0,5.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=0) ATL: (1.0,5.0)
+  (x=5.0 ht=1) SEA: (5.0,5.0)
+[This results in taking a replacement (ATL) from the left subtree]
+delete(SEA): successful
+Preorder list:
+  (x=1.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+Tree structure:
+  (x=1.0 ht=0) ATL: (1.0,5.0)
+delete(ATL): successful
+Preorder list:
+  []
+Tree structure:
+insert(ATL): successful {Atlanta, (1.0,5.0)}
+Preorder list:
+  (x=1.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+Tree structure:
+  (x=1.0 ht=0) ATL: (1.0,5.0)
+insert(BWI): successful {Baltimore, (8.0,8.0)}
+Preorder list:
+  (x=1.0 ht=1) ATL: (1.0,5.0)
+  []
+  (y=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  (x=1.0 ht=1) ATL: (1.0,5.0)
+  | (y=8.0 ht=0) BWI: (8.0,8.0)
+[This results in rebuilding the subtree rooted at ATL]
+insert(ORD): successful {Chicago, (2.0,6.0)}
+Preorder list:
+  (x=2.0 ht=1) ORD: (2.0,6.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=0) ATL: (1.0,5.0)
+  (x=2.0 ht=1) ORD: (2.0,6.0)
+  | (y=8.0 ht=0) BWI: (8.0,8.0)
+insert(DFW): successful {Dallas-Fort Worth, (3.0,8.0)}
+Preorder list:
+  (x=2.0 ht=2) ORD: (2.0,6.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=8.0 ht=1) BWI: (8.0,8.0)
+  []
+  (x=3.0 ht=0) DFW: (3.0,8.0)
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=0) ATL: (1.0,5.0)
+  (x=2.0 ht=2) ORD: (2.0,6.0)
+  | (y=8.0 ht=1) BWI: (8.0,8.0)
+  | | (x=3.0 ht=0) DFW: (3.0,8.0)
+insert(IAD): successful {Dulles, (3.0,4.0)}
+Preorder list:
+  (x=2.0 ht=2) ORD: (2.0,6.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=8.0 ht=1) BWI: (8.0,8.0)
+  (x=3.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (x=3.0 ht=0) DFW: (3.0,8.0)
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=0) ATL: (1.0,5.0)
+  (x=2.0 ht=2) ORD: (2.0,6.0)
+  | | (x=3.0 ht=0) IAD: (3.0,4.0)
+  | (y=8.0 ht=1) BWI: (8.0,8.0)
+  | | (x=3.0 ht=0) DFW: (3.0,8.0)
+[This results in rebuilding the subtree rooted at ORD]
+insert(LAX): successful {Los Angeles, (4.0,2.0)}
+Preorder list:
+  (x=3.0 ht=2) DFW: (3.0,8.0)
+  (y=5.0 ht=1) ATL: (1.0,5.0)
+  (y=4.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (y=6.0 ht=0) ORD: (2.0,6.0)
+  []
+  []
+  (y=8.0 ht=1) BWI: (8.0,8.0)
+  (y=2.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  []
+Tree structure:
+  | | (y=4.0 ht=0) IAD: (3.0,4.0)
+  | (y=5.0 ht=1) ATL: (1.0,5.0)
+  | | (y=6.0 ht=0) ORD: (2.0,6.0)
+  (x=3.0 ht=2) DFW: (3.0,8.0)
+  | | (y=2.0 ht=0) LAX: (4.0,2.0)
+  | (y=8.0 ht=1) BWI: (8.0,8.0)
+[This results in rebuilding the subtree rooted at BWI]
+insert(JFK): successful {New York, (9.0,3.0)}
+Preorder list:
+  (x=3.0 ht=2) DFW: (3.0,8.0)
+  (y=5.0 ht=1) ATL: (1.0,5.0)
+  (y=4.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (y=6.0 ht=0) ORD: (2.0,6.0)
+  []
+  []
+  (y=3.0 ht=1) JFK: (9.0,3.0)
+  (x=4.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (x=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | (y=4.0 ht=0) IAD: (3.0,4.0)
+  | (y=5.0 ht=1) ATL: (1.0,5.0)
+  | | (y=6.0 ht=0) ORD: (2.0,6.0)
+  (x=3.0 ht=2) DFW: (3.0,8.0)
+  | | (x=4.0 ht=0) LAX: (4.0,2.0)
+  | (y=3.0 ht=1) JFK: (9.0,3.0)
+  | | (x=8.0 ht=0) BWI: (8.0,8.0)
+insert(SFO): successful {San Francisco, (1.0,9.0)}
+Preorder list:
+  (x=3.0 ht=3) DFW: (3.0,8.0)
+  (y=5.0 ht=2) ATL: (1.0,5.0)
+  (y=4.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (y=6.0 ht=1) ORD: (2.0,6.0)
+  []
+  (y=9.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  (y=3.0 ht=1) JFK: (9.0,3.0)
+  (x=4.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (x=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | (y=4.0 ht=0) IAD: (3.0,4.0)
+  | (y=5.0 ht=2) ATL: (1.0,5.0)
+  | | (y=6.0 ht=1) ORD: (2.0,6.0)
+  | | | (y=9.0 ht=0) SFO: (1.0,9.0)
+  (x=3.0 ht=3) DFW: (3.0,8.0)
+  | | (x=4.0 ht=0) LAX: (4.0,2.0)
+  | (y=3.0 ht=1) JFK: (9.0,3.0)
+  | | (x=8.0 ht=0) BWI: (8.0,8.0)
+insert(SEA): successful {Seattle, (5.0,5.0)}
+Preorder list:
+  (x=3.0 ht=3) DFW: (3.0,8.0)
+  (y=5.0 ht=2) ATL: (1.0,5.0)
+  (y=4.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (y=6.0 ht=1) ORD: (2.0,6.0)
+  []
+  (y=9.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  (y=3.0 ht=2) JFK: (9.0,3.0)
+  (x=4.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (x=8.0 ht=1) BWI: (8.0,8.0)
+  (y=5.0 ht=0) SEA: (5.0,5.0)
+  []
+  []
+  []
+Tree structure:
+  | | (y=4.0 ht=0) IAD: (3.0,4.0)
+  | (y=5.0 ht=2) ATL: (1.0,5.0)
+  | | (y=6.0 ht=1) ORD: (2.0,6.0)
+  | | | (y=9.0 ht=0) SFO: (1.0,9.0)
+  (x=3.0 ht=3) DFW: (3.0,8.0)
+  | | (x=4.0 ht=0) LAX: (4.0,2.0)
+  | (y=3.0 ht=2) JFK: (9.0,3.0)
+  | | | (y=5.0 ht=0) SEA: (5.0,5.0)
+  | | (x=8.0 ht=1) BWI: (8.0,8.0)
+[This results in rebuilding the subtree rooted at BWI]
+insert(DCA): successful {Washington, (6.0,7.0)}
+Preorder list:
+  (x=3.0 ht=3) DFW: (3.0,8.0)
+  (y=5.0 ht=2) ATL: (1.0,5.0)
+  (y=4.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (y=6.0 ht=1) ORD: (2.0,6.0)
+  []
+  (y=9.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  (y=3.0 ht=2) JFK: (9.0,3.0)
+  (x=4.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (x=6.0 ht=1) DCA: (6.0,7.0)
+  (y=5.0 ht=0) SEA: (5.0,5.0)
+  []
+  []
+  (y=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | (y=4.0 ht=0) IAD: (3.0,4.0)
+  | (y=5.0 ht=2) ATL: (1.0,5.0)
+  | | (y=6.0 ht=1) ORD: (2.0,6.0)
+  | | | (y=9.0 ht=0) SFO: (1.0,9.0)
+  (x=3.0 ht=3) DFW: (3.0,8.0)
+  | | (x=4.0 ht=0) LAX: (4.0,2.0)
+  | (y=3.0 ht=2) JFK: (9.0,3.0)
+  | | | (y=5.0 ht=0) SEA: (5.0,5.0)
+  | | (x=6.0 ht=1) DCA: (6.0,7.0)
+  | | | (y=8.0 ht=0) BWI: (8.0,8.0)
+size: 10

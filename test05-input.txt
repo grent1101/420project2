@@ -1,0 +1,33 @@
+comment:This uses a non-square bounding box. It tests insert, delete, preorder, size, and clear
+initialize:1:0:7:0:10
+size
+comment:This causes an insertion outside bounding box exception
+insert:JFK:New York:9:3
+preorder
+insert:SEA:Seattle:5:5
+preorder
+insert:IAD:Dulles:3:4
+preorder
+find:5:5
+find:3:4
+find:5:4
+find:9:3
+insert:DCA:Washington:5:7
+preorder
+insert:SFO:San Francisco:1:9
+preorder
+insert:LAX:Los Angeles:4:2
+preorder
+comment:This causes an insertion outside bounding box exception
+insert:BWI:Baltimore:6:12
+preorder
+size
+comment:This results in taking a replacement (DCA) from the right subtree and then taking a replacement (SFO) from the left subtree
+delete:SEA
+preorder
+find:5:5
+size
+comment:This results in taking a replacement (SFO) from the right subtree and then rebuilding the subtree rooted at SFO
+delete:DCA
+preorder
+size

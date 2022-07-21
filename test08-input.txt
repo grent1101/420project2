@@ -1,0 +1,16 @@
+comment:This tests insert, preorder, and orthog-range-report
+initialize:1:0:20:0:20
+insert:SEA:Seattle:10:11
+insert:DCA:Washington:12:14
+insert:ORD:Chicago:4:12
+insert:BWI:Baltimore:16:17
+insert:JFK:New York:18:6
+insert:DFW:Dallas-Fort Worth:7:16
+insert:IAD:Dulles:6:8
+insert:SFO:San Francisco:3:18
+insert:ATL:Atlanta:2:10
+insert:LAX:Los Angeles:8:4
+preorder
+orthog-range-report:0:20:0:20
+orthog-range-report:4:10:4:10
+orthog-range-report:13:14:13:14

@@ -1,0 +1,99 @@
+comment:This tests insert, find, preorder, size, and clear
+initialize:1:0:10:0:10
+insert:DFW:Dallas-Fort Worth:3:8
+preorder
+insert:IAD:Dulles:3:4
+preorder
+comment:This results in rebuilding the subtree rooted at DFW
+insert:DCA:Washington:6:7
+preorder
+insert:SEA:Seattle:5:5
+preorder
+comment:This results in rebuilding the subtree rooted at DCA
+insert:LAX:Los Angeles:4:2
+preorder
+find:5:5
+find:3:5
+find:6:7
+find:4:2
+find:3:8
+find:9:3
+find:8:8
+find:2:6
+find:0:0
+find:3:8.01
+find:5:4
+find:7:6
+find:-1:-2
+find:12:4
+find:4:19
+insert:SFO:San Francisco:1:9
+preorder
+insert:BWI:Baltimore:8:8
+preorder
+comment:This results in rebuilding the subtree rooted at IAD
+insert:ORD:Chicago:2:6
+preorder
+insert:JFK:New York:9:3
+preorder
+insert:ATL:Atlanta:1:5
+preorder
+find:5:5
+find:3:5
+find:6:7
+find:4:2
+find:3:8
+find:9:3
+find:8:8
+find:2:6
+find:0:0
+find:3:8.01
+find:5:4
+find:7:6
+find:-1:-2
+find:12:4
+find:4:19
+size
+clear
+size
+find:5:5
+insert:LAX:Los Angeles:4:2
+preorder
+insert:ATL:Atlanta:1:5
+preorder
+comment:This results in rebuilding the subtree rooted at LAX
+insert:SFO:San Francisco:1:9
+preorder
+insert:BWI:Baltimore:8:8
+preorder
+comment:This results in rebuilding the subtree rooted at LAX
+insert:ORD:Chicago:2:6
+preorder
+comment:This results in rebuilding the subtree rooted at SFO
+insert:IAD:Dulles:3:4
+preorder
+insert:DFW:Dallas-Fort Worth:3:8
+preorder
+insert:SEA:Seattle:5:5
+preorder
+comment:This results in rebuilding the subtree rooted at LAX
+insert:DCA:Washington:6:7
+preorder
+insert:JFK:New York:9:3
+preorder
+find:5:5
+find:3:4
+find:6:7
+find:4:2
+find:3:8
+find:9:3
+find:8:8
+find:2:6
+find:0:0
+find:3:8.01
+find:5:4
+find:7:6
+find:-1:-2
+find:12:4
+find:4:19
+size

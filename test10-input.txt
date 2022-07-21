@@ -1,0 +1,81 @@
+comment:comment:This tests insert, preorder, and orthog-range-report
+initialize:2:-180:180:-90:90
+insert:ZGS:zgs city:-39.87:23.60
+insert:RNE:rne city:-89.96:15.32
+insert:KVI:kvi city:52.58:-48.33
+insert:AKA:aka city:-105.58:-44.38
+insert:NZR:nzr city:-96.85:64.28
+insert:BKR:bkr city:46.55:4.99
+insert:OYU:oyu city:82.04:18.60
+insert:CCJ:ccj city:-124.28:-47.36
+insert:BEW:bew city:-39.94:-47.72
+insert:MFN:mfn city:-122.36:32.97
+insert:FKN:fkn city:-74.72:19.36
+insert:GQH:gqh city:-14.94:-20.71
+insert:CXV:cxv city:-10.25:16.15
+insert:UOP:uop city:74.78:-35.50
+insert:URI:uri city:100.90:46.47
+insert:MEE:mee city:-151.05:-78.44
+insert:IJT:ijt city:-156.39:-29.08
+insert:SRQ:srq city:-103.77:-65.05
+insert:GBZ:gbz city:-136.51:76.60
+insert:AEG:aeg city:-113.77:47.76
+insert:CWT:cwt city:-68.41:15.37
+insert:UKZ:ukz city:-80.89:32.70
+insert:RAQ:raq city:-11.85:-87.49
+insert:LJG:ljg city:12.71:-2.09
+insert:NCJ:ncj city:-24.16:85.81
+insert:SPQ:spq city:-6.89:25.16
+insert:OTD:otd city:64.80:-26.30
+insert:HVU:hvu city:124.65:-18.76
+insert:VXA:vxa city:76.07:61.00
+insert:RZB:rzb city:151.91:31.88
+insert:ZPA:zpa city:-107.35:-12.67
+insert:EEZ:eez city:-56.39:-86.55
+insert:WDC:wdc city:-39.77:-52.66
+insert:FMW:fmw city:11.03:-59.35
+insert:ZYX:zyx city:-27.62:40.85
+insert:KKI:kki city:21.18:66.42
+insert:CXM:cxm city:67.70:-63.30
+insert:XRX:xrx city:58.29:-3.69
+insert:JWW:jww city:126.75:-38.78
+insert:DKS:dks city:159.38:12.66
+insert:XHJ:xhj city:90.39:41.73
+insert:NYZ:nyz city:61.12:73.19
+insert:JGR:jgr city:106.54:22.32
+insert:HWF:hwf city:167.26:37.77
+insert:ISS:iss city:-23.19:-61.39
+insert:OXO:oxo city:54.62:3.46
+insert:QMV:qmv city:83.65:-38.87
+insert:NHM:nhm city:129.56:-78.66
+insert:DVH:dvh city:84.72:-6.59
+insert:LMF:lmf city:75.55:-16.10
+preorder
+orthog-range-report:-89.96:-39.87:15.32:23.60
+orthog-range-report:-105.58:52.58:-48.33:-44.38
+orthog-range-report:-96.85:46.55:4.99:64.28
+orthog-range-report:-124.28:82.04:-47.36:18.60
+orthog-range-report:-122.36:-39.94:-47.72:32.97
+orthog-range-report:-74.72:-14.94:-20.71:19.36
+orthog-range-report:-10.25:74.78:-35.50:16.15
+orthog-range-report:-151.05:100.90:-78.44:46.47
+orthog-range-report:-156.39:-103.77:-65.05:-29.08
+orthog-range-report:-136.51:-113.77:47.76:76.60
+orthog-range-report:-80.89:-68.41:15.37:32.70
+orthog-range-report:-11.85:12.71:-87.49:-2.09
+orthog-range-report:-24.16:-6.89:25.16:85.81
+orthog-range-report:64.80:124.65:-26.30:-18.76
+orthog-range-report:76.07:151.91:31.88:61.00
+orthog-range-report:-107.35:-56.39:-86.55:-12.67
+orthog-range-report:-39.77:11.03:-59.35:-52.66
+orthog-range-report:-27.62:21.18:40.85:66.42
+orthog-range-report:58.29:67.70:-63.30:-3.69
+orthog-range-report:126.75:159.38:-38.78:12.66
+orthog-range-report:61.12:90.39:41.73:73.19
+orthog-range-report:106.54:167.26:22.32:37.77
+orthog-range-report:-23.19:54.62:-61.39:3.46
+orthog-range-report:83.65:129.56:-78.66:-38.87
+orthog-range-report:75.55:84.72:-6.59:-16.10
+orthog-range-report:-180:180:-90:90
+orthog-range-report:90.39:90.39:41.73:41.73
+orthog-range-report:21.19:46.54:-90:90

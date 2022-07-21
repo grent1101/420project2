@@ -1,0 +1,142 @@
+comment:This tests insert, delete, preorder, size, and clear
+initialize:1:0:10:0:10
+insert:ATL:Atlanta:1:5
+preorder
+insert:BWI:Baltimore:8:8
+preorder
+comment:This results in rebuilding the subtree rooted at ATL
+insert:DCA:Washington:6:7
+preorder
+insert:DFW:Dallas-Fort Worth:3:8
+preorder
+insert:IAD:Dulles:3:4
+preorder
+insert:JFK:New York:9:3
+preorder
+insert:LAX:Los Angeles:4:2
+preorder
+insert:ORD:Chicago:2:6
+preorder
+insert:SEA:Seattle:5:5
+preorder
+comment:This results in rebuilding the subtree rooted at DCA
+insert:SFO:San Francisco:1:9
+preorder
+comment:This causes an duplicate point insertion exception
+insert:DUP:Duplicate City:3:4
+preorder
+size
+comment:This results in taking a replacement (SFO) from the left subtree
+delete:DFW
+preorder
+comment:This results in taking a replacement (SEA) from the right subtree and then taking a replacement (JFK) from the left subtree
+delete:LAX
+preorder
+comment:This results in taking a replacement (SFO) from the right subtree and then rebuilding the subtree rooted at SFO
+delete:ORD
+preorder
+comment:This results in taking a replacement (DCA) from the right subtree and then taking a replacement (BWI) from the right subtree
+delete:SEA
+preorder
+delete:IAD
+preorder
+comment:This results in taking a replacement (BWI) from the right subtree and then taking a replacement (JFK) from the left subtree
+delete:DCA
+preorder
+comment:This results in rebuilding the subtree rooted at BWI
+delete:JFK
+preorder
+comment:This causes an nonexistent point deletion exception
+delete-point:6:7
+preorder
+comment:This causes an nonexistent point deletion exception
+delete-point:3:9
+preorder
+comment:This causes an nonexistent point deletion exception
+delete-point:-1:-1
+preorder
+comment:This results in taking a replacement (BWI) from the right subtree
+delete:SFO
+preorder
+comment:This results in taking a replacement (ATL) from the left subtree
+delete:BWI
+preorder
+delete:ATL
+preorder
+size
+clear
+insert:ATL:Atlanta:1:5
+preorder
+insert:BWI:Baltimore:8:8
+preorder
+comment:This results in rebuilding the subtree rooted at ATL
+insert:ORD:Chicago:2:6
+preorder
+insert:DFW:Dallas-Fort Worth:3:8
+preorder
+insert:IAD:Dulles:3:4
+preorder
+comment:This results in rebuilding the subtree rooted at ORD
+insert:LAX:Los Angeles:4:2
+preorder
+comment:This results in rebuilding the subtree rooted at BWI
+insert:JFK:New York:9:3
+preorder
+insert:SFO:San Francisco:1:9
+preorder
+insert:SEA:Seattle:5:5
+preorder
+comment:This results in rebuilding the subtree rooted at BWI
+insert:DCA:Washington:6:7
+preorder
+size
+comment:This results in taking a replacement (SFO) from the right subtree
+delete:ORD
+preorder
+comment:This results in taking a replacement (LAX) from the right subtree and then rebuilding the subtree rooted at JFK
+delete:DFW
+preorder
+delete:SFO
+preorder
+comment:This results in taking a replacement (SEA) from the right subtree and then taking a replacement (JFK) from the left subtree
+delete:LAX
+preorder
+delete:IAD
+preorder
+comment:This results in taking a replacement (BWI) from the right subtree
+delete:DCA
+preorder
+delete:JFK
+preorder
+delete:BWI
+preorder
+comment:This results in taking a replacement (ATL) from the left subtree
+delete:SEA
+preorder
+delete:ATL
+preorder
+insert:ATL:Atlanta:1:5
+preorder
+insert:BWI:Baltimore:8:8
+preorder
+comment:This results in rebuilding the subtree rooted at ATL
+insert:ORD:Chicago:2:6
+preorder
+insert:DFW:Dallas-Fort Worth:3:8
+preorder
+insert:IAD:Dulles:3:4
+preorder
+comment:This results in rebuilding the subtree rooted at ORD
+insert:LAX:Los Angeles:4:2
+preorder
+comment:This results in rebuilding the subtree rooted at BWI
+insert:JFK:New York:9:3
+preorder
+insert:SFO:San Francisco:1:9
+preorder
+insert:SEA:Seattle:5:5
+preorder
+comment:This results in rebuilding the subtree rooted at BWI
+insert:DCA:Washington:6:7
+preorder
+size

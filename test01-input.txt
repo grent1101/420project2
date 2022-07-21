@@ -1,0 +1,50 @@
+comment:This tests insert, preorder, size, and clear
+initialize:1:0:10:0:10
+insert:SEA:Seattle:5:5
+preorder
+insert:IAD:Dulles:3:4
+preorder
+insert:DCA:Washington:6:7
+preorder
+insert:LAX:Los Angeles:4:2
+preorder
+insert:DFW:Dallas-Fort Worth:3:8
+preorder
+insert:JFK:New York:9:3
+preorder
+insert:BWI:Baltimore:8:8
+preorder
+insert:ORD:Chicago:2:6
+preorder
+insert:SFO:San Francisco:1:9
+preorder
+comment:This results in rebuilding the subtree rooted at IAD
+insert:ATL:Atlanta:1:5
+preorder
+size
+clear
+insert:ATL:Atlanta:1:5
+preorder
+insert:SFO:San Francisco:1:9
+preorder
+comment:This results in rebuilding the subtree rooted at ATL
+insert:ORD:Chicago:2:6
+preorder
+insert:IAD:Dulles:3:4
+preorder
+insert:DFW:Dallas-Fort Worth:3:8
+preorder
+comment:This results in rebuilding the subtree rooted at SFO
+insert:LAX:Los Angeles:4:2
+preorder
+comment:This results in rebuilding the subtree rooted at DFW
+insert:SEA:Seattle:5:5
+preorder
+insert:DCA:Washington:6:7
+preorder
+comment:This results in rebuilding the subtree rooted at DFW
+insert:BWI:Baltimore:8:8
+preorder
+insert:JFK:New York:9:3
+preorder
+size

@@ -1,0 +1,102 @@
+comment:This uses a non-square bounding box and a max height difference of 2. It inserts around 25 points and performs a number of deletions
+initialize:2:-180:180:-90:90
+insert:FOC:foc city:14.92:-13.41
+insert:NWN:nwn city:-44.98:-29.13
+insert:NJP:njp city:111.48:-72.52
+insert:GKC:gkc city:-64.91:66.76
+insert:ZVP:zvp city:-83.72:73.66
+comment:This results in rebuilding the subtree rooted at NWN
+insert:XGM:xgm city:-140.90:72.69
+preorder
+insert:LPM:lpm city:104.35:-25.23
+insert:HJO:hjo city:-168.02:37.01
+insert:CSH:csh city:87.38:77.07
+comment:This results in rebuilding the subtree rooted at NJP
+insert:MCB:mcb city:15.98:-8.90
+preorder
+insert:JIX:jix city:-163.58:89.53
+insert:UXH:uxh city:145.26:-87.77
+insert:LJH:ljh city:133.04:-67.92
+insert:ZNC:znc city:-81.55:87.43
+insert:QWN:qwn city:87.02:24.91
+comment:This results in rebuilding the subtree rooted at GKC
+insert:BAR:bar city:-154.34:-19.27
+preorder
+insert:IIE:iie city:-79.09:3.77
+insert:VHT:vht city:122.40:62.29
+insert:OGE:oge city:-170.52:18.76
+comment:This results in rebuilding the subtree rooted at HJO
+insert:VRM:vrm city:-153.58:-17.39
+preorder
+insert:RNF:rnf city:37.16:66.60
+insert:MQI:mqi city:112.96:-16.38
+insert:WQZ:wqz city:-80.39:27.22
+comment:This results in rebuilding the subtree rooted at UXH
+insert:MTS:mts city:144.56:-31.46
+preorder
+insert:ZPB:zpb city:66.41:-27.13
+comment:This causes an insertion outside bounding box exception
+insert:BOG:bogus city:181:37.00
+preorder
+size
+delete:MQI
+comment:This causes a nonexistant point deletion exception
+delete:DEL
+delete:HJO
+comment:This results in taking a replacement (BAR) from the left
+delete:OGE
+comment:This results in taking a replacement (MCB) from the right then replacement (QWN) from the right then replacement (RNF) from the right
+delete:FOC
+comment:This results in taking a replacement (ZNC) from the right
+delete:ZVP
+comment:This causes a nonexistant point deletion exception
+delete:BOG
+size
+preorder
+find:-154.34:-19.27
+find:-83.72:73.66
+find:104.35:-25.23
+find:-25.23:104.35
+comment:This results in taking a replacement (NWN) from the left
+delete:IIE
+delete:NWN
+comment:This results in taking a replacement (RNF) from the right
+delete:MCB
+comment:This results in taking a replacement (ZPB) from the right
+delete:RNF
+comment:This results in taking a replacement (GKC) from the right
+delete:WQZ
+preorder
+comment:This results in taking a replacement (UXH) from the left then replacement (LJH) from the left
+delete:MTS
+delete:GKC
+comment:This results in taking a replacement (XGM) from the left
+delete:ZNC
+delete:XGM
+delete:LJH
+preorder
+comment:This results in taking a replacement (VHT) from the right
+delete:QWN
+delete:LPM
+delete:BAR
+delete:CSH
+comment:This results in taking a replacement (UXH) from the right
+delete:NJP
+preorder
+comment:This results in taking a replacement (JIX) from the left
+delete:VRM
+comment:This results in taking a replacement (VHT) from the right then replacement (UXH) from the left
+delete:ZPB
+delete:JIX
+delete:UXH
+preorder
+clear
+insert:FOC:foc city:14.92:-13.41
+insert:NWN:nwn city:-44.98:-29.13
+insert:NJP:njp city:111.48:-72.52
+preorder
+delete:NWN
+delete:NJP
+delete:FOC
+preorder
+size

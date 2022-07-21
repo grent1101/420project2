@@ -1,0 +1,132 @@
+[This uses a non-square bounding box. It tests insert, delete, preorder, size, and clear]
+initialize: height-difference = 1, bounding-box = [(0.0,0.0),(7.0,10.0)]
+size: 0
+[This causes an insertion outside bounding box exception]
+insert(JFK): failure due to exception: "Attempt to insert a point outside bounding box"
+Preorder list:
+  []
+Tree structure:
+insert(SEA): successful {Seattle, (5.0,5.0)}
+Preorder list:
+  (y=5.0 ht=0) SEA: (5.0,5.0)
+  []
+  []
+Tree structure:
+  (y=5.0 ht=0) SEA: (5.0,5.0)
+insert(IAD): successful {Dulles, (3.0,4.0)}
+Preorder list:
+  (y=5.0 ht=1) SEA: (5.0,5.0)
+  (x=3.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  []
+Tree structure:
+  | (x=3.0 ht=0) IAD: (3.0,4.0)
+  (y=5.0 ht=1) SEA: (5.0,5.0)
+find((5.0,5.0)): found [SEA: (5.0,5.0)]
+find((3.0,4.0)): found [IAD: (3.0,4.0)]
+find((5.0,4.0)): not found
+find((9.0,3.0)): not found
+insert(DCA): successful {Washington, (5.0,7.0)}
+Preorder list:
+  (y=5.0 ht=1) SEA: (5.0,5.0)
+  (x=3.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (x=5.0 ht=0) DCA: (5.0,7.0)
+  []
+  []
+Tree structure:
+  | (x=3.0 ht=0) IAD: (3.0,4.0)
+  (y=5.0 ht=1) SEA: (5.0,5.0)
+  | (x=5.0 ht=0) DCA: (5.0,7.0)
+insert(SFO): successful {San Francisco, (1.0,9.0)}
+Preorder list:
+  (y=5.0 ht=2) SEA: (5.0,5.0)
+  (x=3.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (x=5.0 ht=1) DCA: (5.0,7.0)
+  (x=1.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  []
+Tree structure:
+  | (x=3.0 ht=0) IAD: (3.0,4.0)
+  (y=5.0 ht=2) SEA: (5.0,5.0)
+  | | (x=1.0 ht=0) SFO: (1.0,9.0)
+  | (x=5.0 ht=1) DCA: (5.0,7.0)
+insert(LAX): successful {Los Angeles, (4.0,2.0)}
+Preorder list:
+  (y=5.0 ht=2) SEA: (5.0,5.0)
+  (x=3.0 ht=1) IAD: (3.0,4.0)
+  []
+  (y=2.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (x=5.0 ht=1) DCA: (5.0,7.0)
+  (x=1.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  []
+Tree structure:
+  | (x=3.0 ht=1) IAD: (3.0,4.0)
+  | | (y=2.0 ht=0) LAX: (4.0,2.0)
+  (y=5.0 ht=2) SEA: (5.0,5.0)
+  | | (x=1.0 ht=0) SFO: (1.0,9.0)
+  | (x=5.0 ht=1) DCA: (5.0,7.0)
+[This causes an insertion outside bounding box exception]
+insert(BWI): failure due to exception: "Attempt to insert a point outside bounding box"
+Preorder list:
+  (y=5.0 ht=2) SEA: (5.0,5.0)
+  (x=3.0 ht=1) IAD: (3.0,4.0)
+  []
+  (y=2.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (x=5.0 ht=1) DCA: (5.0,7.0)
+  (x=1.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  []
+Tree structure:
+  | (x=3.0 ht=1) IAD: (3.0,4.0)
+  | | (y=2.0 ht=0) LAX: (4.0,2.0)
+  (y=5.0 ht=2) SEA: (5.0,5.0)
+  | | (x=1.0 ht=0) SFO: (1.0,9.0)
+  | (x=5.0 ht=1) DCA: (5.0,7.0)
+size: 5
+[This results in taking a replacement (DCA) from the right subtree and then taking a replacement (SFO) from the left subtree]
+delete(SEA): successful
+Preorder list:
+  (y=7.0 ht=2) DCA: (5.0,7.0)
+  (x=3.0 ht=1) IAD: (3.0,4.0)
+  []
+  (y=2.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (x=1.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+Tree structure:
+  | (x=3.0 ht=1) IAD: (3.0,4.0)
+  | | (y=2.0 ht=0) LAX: (4.0,2.0)
+  (y=7.0 ht=2) DCA: (5.0,7.0)
+  | (x=1.0 ht=0) SFO: (1.0,9.0)
+find((5.0,5.0)): not found
+size: 4
+[This results in taking a replacement (SFO) from the right subtree and then rebuilding the subtree rooted at SFO]
+delete(DCA): successful
+Preorder list:
+  (y=4.0 ht=1) IAD: (3.0,4.0)
+  (x=4.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (x=1.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+Tree structure:
+  | (x=4.0 ht=0) LAX: (4.0,2.0)
+  (y=4.0 ht=1) IAD: (3.0,4.0)
+  | (x=1.0 ht=0) SFO: (1.0,9.0)
+size: 3

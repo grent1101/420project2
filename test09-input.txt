@@ -1,0 +1,43 @@
+comment:This tests insert, preorder, and orthog-range-report
+initialize:2:-180:180:-90:90
+insert:FOC:foc city:14.92:-13.41
+insert:ZVP:zvp city:-83.72:73.66
+insert:MCB:mcb city:15.98:-8.90
+insert:XGM:xgm city:-140.90:72.69
+insert:GKC:gkc city:-64.91:66.76
+insert:NJP:njp city:111.48:-72.52
+insert:CSH:csh city:87.38:77.07
+insert:OGE:oge city:-170.52:18.76
+insert:JIX:jix city:-163.58:89.53
+insert:NWN:nwn city:-44.98:-29.13
+insert:ZNC:znc city:-81.55:87.43
+insert:LPM:lpm city:104.35:-25.23
+insert:MTS:mts city:144.56:-31.46
+insert:QWN:qwn city:87.02:24.91
+insert:VHT:vht city:122.40:62.29
+insert:VRM:vrm city:-153.58:-17.39
+insert:HJO:hjo city:-168.02:37.01
+insert:IIE:iie city:-79.09:3.77
+insert:ZPB:zpb city:66.41:-27.13
+insert:UXH:uxh city:145.26:-87.77
+insert:MQI:mqi city:112.96:-16.38
+insert:RNF:rnf city:37.16:66.60
+insert:BAR:bar city:-154.34:-19.27
+insert:WQZ:wqz city:-80.39:27.22
+insert:LJH:ljh city:133.04:-67.92
+preorder
+orthog-range-report:-83.72:14.92:-13.41:73.66
+orthog-range-report:-140.90:15.98:-8.90:72.69
+orthog-range-report:-64.91:111.48:-72.52:66.76
+orthog-range-report:-170.52:87.38:18.76:77.07
+orthog-range-report:-163.58:-44.98:-29.13:89.53
+orthog-range-report:-81.55:104.35:-25.23:87.43
+orthog-range-report:87.02:144.56:-31.46:24.91
+orthog-range-report:-153.58:122.40:-17.39:62.29
+orthog-range-report:-168.02:-79.09:3.77:37.01
+orthog-range-report:66.41:145.26:-87.77:-27.13
+orthog-range-report:37.16:112.96:-16.38:66.60
+orthog-range-report:-154.34:-80.39:-19.27:27.22
+orthog-range-report:-180:180:-90:90
+orthog-range-report:-168.02:-168.02:37.01:37.01
+orthog-range-report:37.17:37.18:66.60:66.61

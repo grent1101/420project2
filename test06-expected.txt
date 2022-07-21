@@ -1,0 +1,593 @@
+[This uses a non-square bounding box and a max height difference of 2. It inserts around 25 points and performs a number of deletions]
+initialize: height-difference = 2, bounding-box = [(-180.0,-90.0),(180.0,90.0)]
+insert(FOC): successful {foc city, (14.92,-13.41)}
+insert(NWN): successful {nwn city, (-44.98,-29.13)}
+insert(NJP): successful {njp city, (111.48,-72.52)}
+insert(GKC): successful {gkc city, (-64.91,66.76)}
+insert(ZVP): successful {zvp city, (-83.72,73.66)}
+[This results in rebuilding the subtree rooted at NWN]
+insert(XGM): successful {xgm city, (-140.9,72.69)}
+Preorder list:
+  (x=14.92 ht=3) FOC: (14.92,-13.41)
+  (x=-64.91 ht=2) GKC: (-64.91,66.76)
+  (y=73.66 ht=1) ZVP: (-83.72,73.66)
+  (y=72.69 ht=0) XGM: (-140.9,72.69)
+  []
+  []
+  []
+  (y=-29.13 ht=0) NWN: (-44.98,-29.13)
+  []
+  []
+  (y=-72.52 ht=0) NJP: (111.48,-72.52)
+  []
+  []
+Tree structure:
+  | | | (y=72.69 ht=0) XGM: (-140.9,72.69)
+  | | (y=73.66 ht=1) ZVP: (-83.72,73.66)
+  | (x=-64.91 ht=2) GKC: (-64.91,66.76)
+  | | (y=-29.13 ht=0) NWN: (-44.98,-29.13)
+  (x=14.92 ht=3) FOC: (14.92,-13.41)
+  | (y=-72.52 ht=0) NJP: (111.48,-72.52)
+insert(LPM): successful {lpm city, (104.35,-25.23)}
+insert(HJO): successful {hjo city, (-168.02,37.01)}
+insert(CSH): successful {csh city, (87.38,77.07)}
+[This results in rebuilding the subtree rooted at NJP]
+insert(MCB): successful {mcb city, (15.98,-8.9)}
+Preorder list:
+  (x=14.92 ht=4) FOC: (14.92,-13.41)
+  (x=-64.91 ht=3) GKC: (-64.91,66.76)
+  (y=73.66 ht=2) ZVP: (-83.72,73.66)
+  (y=72.69 ht=1) XGM: (-140.9,72.69)
+  (y=37.01 ht=0) HJO: (-168.02,37.01)
+  []
+  []
+  []
+  []
+  (y=-29.13 ht=0) NWN: (-44.98,-29.13)
+  []
+  []
+  (y=-8.9 ht=2) MCB: (15.98,-8.9)
+  (x=111.48 ht=1) NJP: (111.48,-72.52)
+  (x=104.35 ht=0) LPM: (104.35,-25.23)
+  []
+  []
+  []
+  (x=87.38 ht=0) CSH: (87.38,77.07)
+  []
+  []
+Tree structure:
+  | | | | (y=37.01 ht=0) HJO: (-168.02,37.01)
+  | | | (y=72.69 ht=1) XGM: (-140.9,72.69)
+  | | (y=73.66 ht=2) ZVP: (-83.72,73.66)
+  | (x=-64.91 ht=3) GKC: (-64.91,66.76)
+  | | (y=-29.13 ht=0) NWN: (-44.98,-29.13)
+  (x=14.92 ht=4) FOC: (14.92,-13.41)
+  | | | (x=104.35 ht=0) LPM: (104.35,-25.23)
+  | | (x=111.48 ht=1) NJP: (111.48,-72.52)
+  | (y=-8.9 ht=2) MCB: (15.98,-8.9)
+  | | (x=87.38 ht=0) CSH: (87.38,77.07)
+insert(JIX): successful {jix city, (-163.58,89.53)}
+insert(UXH): successful {uxh city, (145.26,-87.77)}
+insert(LJH): successful {ljh city, (133.04,-67.92)}
+insert(ZNC): successful {znc city, (-81.55,87.43)}
+insert(QWN): successful {qwn city, (87.02,24.91)}
+[This results in rebuilding the subtree rooted at GKC]
+insert(BAR): successful {bar city, (-154.34,-19.27)}
+Preorder list:
+  (x=14.92 ht=4) FOC: (14.92,-13.41)
+  (x=-83.72 ht=3) ZVP: (-83.72,73.66)
+  (y=72.69 ht=2) XGM: (-140.9,72.69)
+  (y=37.01 ht=1) HJO: (-168.02,37.01)
+  (y=-19.27 ht=0) BAR: (-154.34,-19.27)
+  []
+  []
+  []
+  (x=-163.58 ht=0) JIX: (-163.58,89.53)
+  []
+  []
+  (y=66.76 ht=1) GKC: (-64.91,66.76)
+  (y=-29.13 ht=0) NWN: (-44.98,-29.13)
+  []
+  []
+  (x=-81.55 ht=0) ZNC: (-81.55,87.43)
+  []
+  []
+  (y=-8.9 ht=3) MCB: (15.98,-8.9)
+  (x=111.48 ht=2) NJP: (111.48,-72.52)
+  (x=104.35 ht=0) LPM: (104.35,-25.23)
+  []
+  []
+  (y=-87.77 ht=1) UXH: (145.26,-87.77)
+  []
+  (y=-67.92 ht=0) LJH: (133.04,-67.92)
+  []
+  []
+  (x=87.38 ht=1) CSH: (87.38,77.07)
+  (y=24.91 ht=0) QWN: (87.02,24.91)
+  []
+  []
+  []
+Tree structure:
+  | | | | (y=-19.27 ht=0) BAR: (-154.34,-19.27)
+  | | | (y=37.01 ht=1) HJO: (-168.02,37.01)
+  | | (y=72.69 ht=2) XGM: (-140.9,72.69)
+  | | | (x=-163.58 ht=0) JIX: (-163.58,89.53)
+  | (x=-83.72 ht=3) ZVP: (-83.72,73.66)
+  | | | (y=-29.13 ht=0) NWN: (-44.98,-29.13)
+  | | (y=66.76 ht=1) GKC: (-64.91,66.76)
+  | | | (x=-81.55 ht=0) ZNC: (-81.55,87.43)
+  (x=14.92 ht=4) FOC: (14.92,-13.41)
+  | | | (x=104.35 ht=0) LPM: (104.35,-25.23)
+  | | (x=111.48 ht=2) NJP: (111.48,-72.52)
+  | | | (y=-87.77 ht=1) UXH: (145.26,-87.77)
+  | | | | (y=-67.92 ht=0) LJH: (133.04,-67.92)
+  | (y=-8.9 ht=3) MCB: (15.98,-8.9)
+  | | | (y=24.91 ht=0) QWN: (87.02,24.91)
+  | | (x=87.38 ht=1) CSH: (87.38,77.07)
+insert(IIE): successful {iie city, (-79.09,3.77)}
+insert(VHT): successful {vht city, (122.4,62.29)}
+insert(OGE): successful {oge city, (-170.52,18.76)}
+[This results in rebuilding the subtree rooted at HJO]
+insert(VRM): successful {vrm city, (-153.58,-17.39)}
+Preorder list:
+  (x=14.92 ht=5) FOC: (14.92,-13.41)
+  (x=-83.72 ht=4) ZVP: (-83.72,73.66)
+  (y=72.69 ht=3) XGM: (-140.9,72.69)
+  (y=18.76 ht=2) OGE: (-170.52,18.76)
+  (y=-17.39 ht=1) VRM: (-153.58,-17.39)
+  (x=-154.34 ht=0) BAR: (-154.34,-19.27)
+  []
+  []
+  []
+  (x=-168.02 ht=0) HJO: (-168.02,37.01)
+  []
+  []
+  (x=-163.58 ht=0) JIX: (-163.58,89.53)
+  []
+  []
+  (y=66.76 ht=2) GKC: (-64.91,66.76)
+  (y=-29.13 ht=1) NWN: (-44.98,-29.13)
+  []
+  (x=-79.09 ht=0) IIE: (-79.09,3.77)
+  []
+  []
+  (x=-81.55 ht=0) ZNC: (-81.55,87.43)
+  []
+  []
+  (y=-8.9 ht=3) MCB: (15.98,-8.9)
+  (x=111.48 ht=2) NJP: (111.48,-72.52)
+  (x=104.35 ht=0) LPM: (104.35,-25.23)
+  []
+  []
+  (y=-87.77 ht=1) UXH: (145.26,-87.77)
+  []
+  (y=-67.92 ht=0) LJH: (133.04,-67.92)
+  []
+  []
+  (x=87.38 ht=1) CSH: (87.38,77.07)
+  (y=24.91 ht=0) QWN: (87.02,24.91)
+  []
+  []
+  (y=62.29 ht=0) VHT: (122.4,62.29)
+  []
+  []
+Tree structure:
+  | | | | | (x=-154.34 ht=0) BAR: (-154.34,-19.27)
+  | | | | (y=-17.39 ht=1) VRM: (-153.58,-17.39)
+  | | | (y=18.76 ht=2) OGE: (-170.52,18.76)
+  | | | | (x=-168.02 ht=0) HJO: (-168.02,37.01)
+  | | (y=72.69 ht=3) XGM: (-140.9,72.69)
+  | | | (x=-163.58 ht=0) JIX: (-163.58,89.53)
+  | (x=-83.72 ht=4) ZVP: (-83.72,73.66)
+  | | | (y=-29.13 ht=1) NWN: (-44.98,-29.13)
+  | | | | (x=-79.09 ht=0) IIE: (-79.09,3.77)
+  | | (y=66.76 ht=2) GKC: (-64.91,66.76)
+  | | | (x=-81.55 ht=0) ZNC: (-81.55,87.43)
+  (x=14.92 ht=5) FOC: (14.92,-13.41)
+  | | | (x=104.35 ht=0) LPM: (104.35,-25.23)
+  | | (x=111.48 ht=2) NJP: (111.48,-72.52)
+  | | | (y=-87.77 ht=1) UXH: (145.26,-87.77)
+  | | | | (y=-67.92 ht=0) LJH: (133.04,-67.92)
+  | (y=-8.9 ht=3) MCB: (15.98,-8.9)
+  | | | (y=24.91 ht=0) QWN: (87.02,24.91)
+  | | (x=87.38 ht=1) CSH: (87.38,77.07)
+  | | | (y=62.29 ht=0) VHT: (122.4,62.29)
+insert(RNF): successful {rnf city, (37.16,66.6)}
+insert(MQI): successful {mqi city, (112.96,-16.38)}
+insert(WQZ): successful {wqz city, (-80.39,27.22)}
+[This results in rebuilding the subtree rooted at UXH]
+insert(MTS): successful {mts city, (144.56,-31.46)}
+Preorder list:
+  (x=14.92 ht=5) FOC: (14.92,-13.41)
+  (x=-83.72 ht=4) ZVP: (-83.72,73.66)
+  (y=72.69 ht=3) XGM: (-140.9,72.69)
+  (y=18.76 ht=2) OGE: (-170.52,18.76)
+  (y=-17.39 ht=1) VRM: (-153.58,-17.39)
+  (x=-154.34 ht=0) BAR: (-154.34,-19.27)
+  []
+  []
+  []
+  (x=-168.02 ht=0) HJO: (-168.02,37.01)
+  []
+  []
+  (x=-163.58 ht=0) JIX: (-163.58,89.53)
+  []
+  []
+  (y=66.76 ht=3) GKC: (-64.91,66.76)
+  (y=-29.13 ht=2) NWN: (-44.98,-29.13)
+  []
+  (x=-79.09 ht=1) IIE: (-79.09,3.77)
+  (y=27.22 ht=0) WQZ: (-80.39,27.22)
+  []
+  []
+  []
+  (x=-81.55 ht=0) ZNC: (-81.55,87.43)
+  []
+  []
+  (y=-8.9 ht=4) MCB: (15.98,-8.9)
+  (x=111.48 ht=3) NJP: (111.48,-72.52)
+  (x=104.35 ht=0) LPM: (104.35,-25.23)
+  []
+  []
+  (y=-31.46 ht=2) MTS: (144.56,-31.46)
+  (x=145.26 ht=1) UXH: (145.26,-87.77)
+  (y=-67.92 ht=0) LJH: (133.04,-67.92)
+  []
+  []
+  []
+  (x=112.96 ht=0) MQI: (112.96,-16.38)
+  []
+  []
+  (x=87.38 ht=2) CSH: (87.38,77.07)
+  (y=24.91 ht=1) QWN: (87.02,24.91)
+  []
+  (x=37.16 ht=0) RNF: (37.16,66.6)
+  []
+  []
+  (y=62.29 ht=0) VHT: (122.4,62.29)
+  []
+  []
+Tree structure:
+  | | | | | (x=-154.34 ht=0) BAR: (-154.34,-19.27)
+  | | | | (y=-17.39 ht=1) VRM: (-153.58,-17.39)
+  | | | (y=18.76 ht=2) OGE: (-170.52,18.76)
+  | | | | (x=-168.02 ht=0) HJO: (-168.02,37.01)
+  | | (y=72.69 ht=3) XGM: (-140.9,72.69)
+  | | | (x=-163.58 ht=0) JIX: (-163.58,89.53)
+  | (x=-83.72 ht=4) ZVP: (-83.72,73.66)
+  | | | (y=-29.13 ht=2) NWN: (-44.98,-29.13)
+  | | | | | (y=27.22 ht=0) WQZ: (-80.39,27.22)
+  | | | | (x=-79.09 ht=1) IIE: (-79.09,3.77)
+  | | (y=66.76 ht=3) GKC: (-64.91,66.76)
+  | | | (x=-81.55 ht=0) ZNC: (-81.55,87.43)
+  (x=14.92 ht=5) FOC: (14.92,-13.41)
+  | | | (x=104.35 ht=0) LPM: (104.35,-25.23)
+  | | (x=111.48 ht=3) NJP: (111.48,-72.52)
+  | | | | | (y=-67.92 ht=0) LJH: (133.04,-67.92)
+  | | | | (x=145.26 ht=1) UXH: (145.26,-87.77)
+  | | | (y=-31.46 ht=2) MTS: (144.56,-31.46)
+  | | | | (x=112.96 ht=0) MQI: (112.96,-16.38)
+  | (y=-8.9 ht=4) MCB: (15.98,-8.9)
+  | | | (y=24.91 ht=1) QWN: (87.02,24.91)
+  | | | | (x=37.16 ht=0) RNF: (37.16,66.6)
+  | | (x=87.38 ht=2) CSH: (87.38,77.07)
+  | | | (y=62.29 ht=0) VHT: (122.4,62.29)
+insert(ZPB): successful {zpb city, (66.41,-27.13)}
+[This causes an insertion outside bounding box exception]
+insert(BOG): failure due to exception: "Attempt to insert a point outside bounding box"
+Preorder list:
+  (x=14.92 ht=5) FOC: (14.92,-13.41)
+  (x=-83.72 ht=4) ZVP: (-83.72,73.66)
+  (y=72.69 ht=3) XGM: (-140.9,72.69)
+  (y=18.76 ht=2) OGE: (-170.52,18.76)
+  (y=-17.39 ht=1) VRM: (-153.58,-17.39)
+  (x=-154.34 ht=0) BAR: (-154.34,-19.27)
+  []
+  []
+  []
+  (x=-168.02 ht=0) HJO: (-168.02,37.01)
+  []
+  []
+  (x=-163.58 ht=0) JIX: (-163.58,89.53)
+  []
+  []
+  (y=66.76 ht=3) GKC: (-64.91,66.76)
+  (y=-29.13 ht=2) NWN: (-44.98,-29.13)
+  []
+  (x=-79.09 ht=1) IIE: (-79.09,3.77)
+  (y=27.22 ht=0) WQZ: (-80.39,27.22)
+  []
+  []
+  []
+  (x=-81.55 ht=0) ZNC: (-81.55,87.43)
+  []
+  []
+  (y=-8.9 ht=4) MCB: (15.98,-8.9)
+  (x=111.48 ht=3) NJP: (111.48,-72.52)
+  (x=104.35 ht=1) LPM: (104.35,-25.23)
+  (x=66.41 ht=0) ZPB: (66.41,-27.13)
+  []
+  []
+  []
+  (y=-31.46 ht=2) MTS: (144.56,-31.46)
+  (x=145.26 ht=1) UXH: (145.26,-87.77)
+  (y=-67.92 ht=0) LJH: (133.04,-67.92)
+  []
+  []
+  []
+  (x=112.96 ht=0) MQI: (112.96,-16.38)
+  []
+  []
+  (x=87.38 ht=2) CSH: (87.38,77.07)
+  (y=24.91 ht=1) QWN: (87.02,24.91)
+  []
+  (x=37.16 ht=0) RNF: (37.16,66.6)
+  []
+  []
+  (y=62.29 ht=0) VHT: (122.4,62.29)
+  []
+  []
+Tree structure:
+  | | | | | (x=-154.34 ht=0) BAR: (-154.34,-19.27)
+  | | | | (y=-17.39 ht=1) VRM: (-153.58,-17.39)
+  | | | (y=18.76 ht=2) OGE: (-170.52,18.76)
+  | | | | (x=-168.02 ht=0) HJO: (-168.02,37.01)
+  | | (y=72.69 ht=3) XGM: (-140.9,72.69)
+  | | | (x=-163.58 ht=0) JIX: (-163.58,89.53)
+  | (x=-83.72 ht=4) ZVP: (-83.72,73.66)
+  | | | (y=-29.13 ht=2) NWN: (-44.98,-29.13)
+  | | | | | (y=27.22 ht=0) WQZ: (-80.39,27.22)
+  | | | | (x=-79.09 ht=1) IIE: (-79.09,3.77)
+  | | (y=66.76 ht=3) GKC: (-64.91,66.76)
+  | | | (x=-81.55 ht=0) ZNC: (-81.55,87.43)
+  (x=14.92 ht=5) FOC: (14.92,-13.41)
+  | | | | (x=66.41 ht=0) ZPB: (66.41,-27.13)
+  | | | (x=104.35 ht=1) LPM: (104.35,-25.23)
+  | | (x=111.48 ht=3) NJP: (111.48,-72.52)
+  | | | | | (y=-67.92 ht=0) LJH: (133.04,-67.92)
+  | | | | (x=145.26 ht=1) UXH: (145.26,-87.77)
+  | | | (y=-31.46 ht=2) MTS: (144.56,-31.46)
+  | | | | (x=112.96 ht=0) MQI: (112.96,-16.38)
+  | (y=-8.9 ht=4) MCB: (15.98,-8.9)
+  | | | (y=24.91 ht=1) QWN: (87.02,24.91)
+  | | | | (x=37.16 ht=0) RNF: (37.16,66.6)
+  | | (x=87.38 ht=2) CSH: (87.38,77.07)
+  | | | (y=62.29 ht=0) VHT: (122.4,62.29)
+size: 25
+delete(MQI): successful
+[This causes a nonexistant point deletion exception]
+delete(DEL): failure due to exception: "Deletion of nonexistent airport code"
+delete(HJO): successful
+[This results in taking a replacement (BAR) from the left]
+delete(OGE): successful
+[This results in taking a replacement (MCB) from the right then replacement (QWN) from the right then replacement (RNF) from the right]
+delete(FOC): successful
+[This results in taking a replacement (ZNC) from the right]
+delete(ZVP): successful
+[This causes a nonexistant point deletion exception]
+delete(BOG): failure due to exception: "Deletion of nonexistent airport code"
+size: 20
+Preorder list:
+  (x=15.98 ht=5) MCB: (15.98,-8.9)
+  (x=-81.55 ht=3) ZNC: (-81.55,87.43)
+  (y=72.69 ht=2) XGM: (-140.9,72.69)
+  (y=-19.27 ht=1) BAR: (-154.34,-19.27)
+  []
+  (y=-17.39 ht=0) VRM: (-153.58,-17.39)
+  []
+  []
+  (x=-163.58 ht=0) JIX: (-163.58,89.53)
+  []
+  []
+  (y=27.22 ht=2) WQZ: (-80.39,27.22)
+  (y=3.77 ht=1) IIE: (-79.09,3.77)
+  (x=-44.98 ht=0) NWN: (-44.98,-29.13)
+  []
+  []
+  []
+  (x=-64.91 ht=0) GKC: (-64.91,66.76)
+  []
+  []
+  (y=24.91 ht=4) QWN: (87.02,24.91)
+  (x=111.48 ht=3) NJP: (111.48,-72.52)
+  (x=104.35 ht=1) LPM: (104.35,-25.23)
+  (x=66.41 ht=0) ZPB: (66.41,-27.13)
+  []
+  []
+  []
+  (y=-31.46 ht=2) MTS: (144.56,-31.46)
+  (x=145.26 ht=1) UXH: (145.26,-87.77)
+  (y=-67.92 ht=0) LJH: (133.04,-67.92)
+  []
+  []
+  []
+  []
+  (x=87.38 ht=1) CSH: (87.38,77.07)
+  (y=66.6 ht=0) RNF: (37.16,66.6)
+  []
+  []
+  (y=62.29 ht=0) VHT: (122.4,62.29)
+  []
+  []
+Tree structure:
+  | | | (y=-19.27 ht=1) BAR: (-154.34,-19.27)
+  | | | | (y=-17.39 ht=0) VRM: (-153.58,-17.39)
+  | | (y=72.69 ht=2) XGM: (-140.9,72.69)
+  | | | (x=-163.58 ht=0) JIX: (-163.58,89.53)
+  | (x=-81.55 ht=3) ZNC: (-81.55,87.43)
+  | | | | (x=-44.98 ht=0) NWN: (-44.98,-29.13)
+  | | | (y=3.77 ht=1) IIE: (-79.09,3.77)
+  | | (y=27.22 ht=2) WQZ: (-80.39,27.22)
+  | | | (x=-64.91 ht=0) GKC: (-64.91,66.76)
+  (x=15.98 ht=5) MCB: (15.98,-8.9)
+  | | | | (x=66.41 ht=0) ZPB: (66.41,-27.13)
+  | | | (x=104.35 ht=1) LPM: (104.35,-25.23)
+  | | (x=111.48 ht=3) NJP: (111.48,-72.52)
+  | | | | | (y=-67.92 ht=0) LJH: (133.04,-67.92)
+  | | | | (x=145.26 ht=1) UXH: (145.26,-87.77)
+  | | | (y=-31.46 ht=2) MTS: (144.56,-31.46)
+  | (y=24.91 ht=4) QWN: (87.02,24.91)
+  | | | (y=66.6 ht=0) RNF: (37.16,66.6)
+  | | (x=87.38 ht=1) CSH: (87.38,77.07)
+  | | | (y=62.29 ht=0) VHT: (122.4,62.29)
+find((-154.34,-19.27)): found [BAR: (-154.34,-19.27)]
+find((-83.72,73.66)): not found
+find((104.35,-25.23)): found [LPM: (104.35,-25.23)]
+find((-25.23,104.35)): not found
+[This results in taking a replacement (NWN) from the left]
+delete(IIE): successful
+delete(NWN): successful
+[This results in taking a replacement (RNF) from the right]
+delete(MCB): successful
+[This results in taking a replacement (ZPB) from the right]
+delete(RNF): successful
+[This results in taking a replacement (GKC) from the right]
+delete(WQZ): successful
+Preorder list:
+  (x=66.41 ht=5) ZPB: (66.41,-27.13)
+  (x=-81.55 ht=3) ZNC: (-81.55,87.43)
+  (y=72.69 ht=2) XGM: (-140.9,72.69)
+  (y=-19.27 ht=1) BAR: (-154.34,-19.27)
+  []
+  (y=-17.39 ht=0) VRM: (-153.58,-17.39)
+  []
+  []
+  (x=-163.58 ht=0) JIX: (-163.58,89.53)
+  []
+  []
+  (y=66.76 ht=0) GKC: (-64.91,66.76)
+  []
+  []
+  (y=24.91 ht=4) QWN: (87.02,24.91)
+  (x=111.48 ht=3) NJP: (111.48,-72.52)
+  (x=104.35 ht=0) LPM: (104.35,-25.23)
+  []
+  []
+  (y=-31.46 ht=2) MTS: (144.56,-31.46)
+  (x=145.26 ht=1) UXH: (145.26,-87.77)
+  (y=-67.92 ht=0) LJH: (133.04,-67.92)
+  []
+  []
+  []
+  []
+  (x=87.38 ht=1) CSH: (87.38,77.07)
+  []
+  (y=62.29 ht=0) VHT: (122.4,62.29)
+  []
+  []
+Tree structure:
+  | | | (y=-19.27 ht=1) BAR: (-154.34,-19.27)
+  | | | | (y=-17.39 ht=0) VRM: (-153.58,-17.39)
+  | | (y=72.69 ht=2) XGM: (-140.9,72.69)
+  | | | (x=-163.58 ht=0) JIX: (-163.58,89.53)
+  | (x=-81.55 ht=3) ZNC: (-81.55,87.43)
+  | | (y=66.76 ht=0) GKC: (-64.91,66.76)
+  (x=66.41 ht=5) ZPB: (66.41,-27.13)
+  | | | (x=104.35 ht=0) LPM: (104.35,-25.23)
+  | | (x=111.48 ht=3) NJP: (111.48,-72.52)
+  | | | | | (y=-67.92 ht=0) LJH: (133.04,-67.92)
+  | | | | (x=145.26 ht=1) UXH: (145.26,-87.77)
+  | | | (y=-31.46 ht=2) MTS: (144.56,-31.46)
+  | (y=24.91 ht=4) QWN: (87.02,24.91)
+  | | (x=87.38 ht=1) CSH: (87.38,77.07)
+  | | | (y=62.29 ht=0) VHT: (122.4,62.29)
+[This results in taking a replacement (UXH) from the left then replacement (LJH) from the left]
+delete(MTS): successful
+delete(GKC): successful
+[This results in taking a replacement (XGM) from the left]
+delete(ZNC): successful
+delete(XGM): successful
+delete(LJH): successful
+Preorder list:
+  (x=66.41 ht=3) ZPB: (66.41,-27.13)
+  (x=-153.58 ht=2) VRM: (-153.58,-17.39)
+  (y=89.53 ht=1) JIX: (-163.58,89.53)
+  (y=-19.27 ht=0) BAR: (-154.34,-19.27)
+  []
+  []
+  []
+  []
+  (y=24.91 ht=2) QWN: (87.02,24.91)
+  (x=111.48 ht=1) NJP: (111.48,-72.52)
+  (x=104.35 ht=0) LPM: (104.35,-25.23)
+  []
+  []
+  (y=-87.77 ht=0) UXH: (145.26,-87.77)
+  []
+  []
+  (x=87.38 ht=1) CSH: (87.38,77.07)
+  []
+  (y=62.29 ht=0) VHT: (122.4,62.29)
+  []
+  []
+Tree structure:
+  | | | (y=-19.27 ht=0) BAR: (-154.34,-19.27)
+  | | (y=89.53 ht=1) JIX: (-163.58,89.53)
+  | (x=-153.58 ht=2) VRM: (-153.58,-17.39)
+  (x=66.41 ht=3) ZPB: (66.41,-27.13)
+  | | | (x=104.35 ht=0) LPM: (104.35,-25.23)
+  | | (x=111.48 ht=1) NJP: (111.48,-72.52)
+  | | | (y=-87.77 ht=0) UXH: (145.26,-87.77)
+  | (y=24.91 ht=2) QWN: (87.02,24.91)
+  | | (x=87.38 ht=1) CSH: (87.38,77.07)
+  | | | (y=62.29 ht=0) VHT: (122.4,62.29)
+[This results in taking a replacement (VHT) from the right]
+delete(QWN): successful
+delete(LPM): successful
+delete(BAR): successful
+delete(CSH): successful
+[This results in taking a replacement (UXH) from the right]
+delete(NJP): successful
+Preorder list:
+  (x=66.41 ht=2) ZPB: (66.41,-27.13)
+  (x=-153.58 ht=1) VRM: (-153.58,-17.39)
+  (y=89.53 ht=0) JIX: (-163.58,89.53)
+  []
+  []
+  []
+  (y=62.29 ht=1) VHT: (122.4,62.29)
+  (x=145.26 ht=0) UXH: (145.26,-87.77)
+  []
+  []
+  []
+Tree structure:
+  | | (y=89.53 ht=0) JIX: (-163.58,89.53)
+  | (x=-153.58 ht=1) VRM: (-153.58,-17.39)
+  (x=66.41 ht=2) ZPB: (66.41,-27.13)
+  | | (x=145.26 ht=0) UXH: (145.26,-87.77)
+  | (y=62.29 ht=1) VHT: (122.4,62.29)
+[This results in taking a replacement (JIX) from the left]
+delete(VRM): successful
+[This results in taking a replacement (VHT) from the right then replacement (UXH) from the left]
+delete(ZPB): successful
+delete(JIX): successful
+delete(UXH): successful
+Preorder list:
+  (x=122.4 ht=0) VHT: (122.4,62.29)
+  []
+  []
+Tree structure:
+  (x=122.4 ht=0) VHT: (122.4,62.29)
+clear: successful
+insert(FOC): successful {foc city, (14.92,-13.41)}
+insert(NWN): successful {nwn city, (-44.98,-29.13)}
+insert(NJP): successful {njp city, (111.48,-72.52)}
+Preorder list:
+  (x=14.92 ht=1) FOC: (14.92,-13.41)
+  (x=-44.98 ht=0) NWN: (-44.98,-29.13)
+  []
+  []
+  (y=-72.52 ht=0) NJP: (111.48,-72.52)
+  []
+  []
+Tree structure:
+  | (x=-44.98 ht=0) NWN: (-44.98,-29.13)
+  (x=14.92 ht=1) FOC: (14.92,-13.41)
+  | (y=-72.52 ht=0) NJP: (111.48,-72.52)
+delete(NWN): successful
+delete(NJP): successful
+delete(FOC): successful
+Preorder list:
+  []
+Tree structure:
+size: 0

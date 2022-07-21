@@ -1,0 +1,420 @@
+[This tests insert, preorder, size, and clear]
+initialize: height-difference = 1, bounding-box = [(0.0,0.0),(10.0,10.0)]
+insert(SEA): successful {Seattle, (5.0,5.0)}
+Preorder list:
+  (x=5.0 ht=0) SEA: (5.0,5.0)
+  []
+  []
+Tree structure:
+  (x=5.0 ht=0) SEA: (5.0,5.0)
+insert(IAD): successful {Dulles, (3.0,4.0)}
+Preorder list:
+  (x=5.0 ht=1) SEA: (5.0,5.0)
+  (y=4.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  []
+Tree structure:
+  | (y=4.0 ht=0) IAD: (3.0,4.0)
+  (x=5.0 ht=1) SEA: (5.0,5.0)
+insert(DCA): successful {Washington, (6.0,7.0)}
+Preorder list:
+  (x=5.0 ht=1) SEA: (5.0,5.0)
+  (y=4.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (y=7.0 ht=0) DCA: (6.0,7.0)
+  []
+  []
+Tree structure:
+  | (y=4.0 ht=0) IAD: (3.0,4.0)
+  (x=5.0 ht=1) SEA: (5.0,5.0)
+  | (y=7.0 ht=0) DCA: (6.0,7.0)
+insert(LAX): successful {Los Angeles, (4.0,2.0)}
+Preorder list:
+  (x=5.0 ht=2) SEA: (5.0,5.0)
+  (y=4.0 ht=1) IAD: (3.0,4.0)
+  (x=4.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  []
+  (y=7.0 ht=0) DCA: (6.0,7.0)
+  []
+  []
+Tree structure:
+  | | (x=4.0 ht=0) LAX: (4.0,2.0)
+  | (y=4.0 ht=1) IAD: (3.0,4.0)
+  (x=5.0 ht=2) SEA: (5.0,5.0)
+  | (y=7.0 ht=0) DCA: (6.0,7.0)
+insert(DFW): successful {Dallas-Fort Worth, (3.0,8.0)}
+Preorder list:
+  (x=5.0 ht=2) SEA: (5.0,5.0)
+  (y=4.0 ht=1) IAD: (3.0,4.0)
+  (x=4.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (y=8.0 ht=0) DFW: (3.0,8.0)
+  []
+  []
+  (y=7.0 ht=0) DCA: (6.0,7.0)
+  []
+  []
+Tree structure:
+  | | (x=4.0 ht=0) LAX: (4.0,2.0)
+  | (y=4.0 ht=1) IAD: (3.0,4.0)
+  | | (y=8.0 ht=0) DFW: (3.0,8.0)
+  (x=5.0 ht=2) SEA: (5.0,5.0)
+  | (y=7.0 ht=0) DCA: (6.0,7.0)
+insert(JFK): successful {New York, (9.0,3.0)}
+Preorder list:
+  (x=5.0 ht=2) SEA: (5.0,5.0)
+  (y=4.0 ht=1) IAD: (3.0,4.0)
+  (x=4.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (y=8.0 ht=0) DFW: (3.0,8.0)
+  []
+  []
+  (y=7.0 ht=1) DCA: (6.0,7.0)
+  (y=3.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  []
+Tree structure:
+  | | (x=4.0 ht=0) LAX: (4.0,2.0)
+  | (y=4.0 ht=1) IAD: (3.0,4.0)
+  | | (y=8.0 ht=0) DFW: (3.0,8.0)
+  (x=5.0 ht=2) SEA: (5.0,5.0)
+  | | (y=3.0 ht=0) JFK: (9.0,3.0)
+  | (y=7.0 ht=1) DCA: (6.0,7.0)
+insert(BWI): successful {Baltimore, (8.0,8.0)}
+Preorder list:
+  (x=5.0 ht=2) SEA: (5.0,5.0)
+  (y=4.0 ht=1) IAD: (3.0,4.0)
+  (x=4.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (y=8.0 ht=0) DFW: (3.0,8.0)
+  []
+  []
+  (y=7.0 ht=1) DCA: (6.0,7.0)
+  (y=3.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  (x=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | (x=4.0 ht=0) LAX: (4.0,2.0)
+  | (y=4.0 ht=1) IAD: (3.0,4.0)
+  | | (y=8.0 ht=0) DFW: (3.0,8.0)
+  (x=5.0 ht=2) SEA: (5.0,5.0)
+  | | (y=3.0 ht=0) JFK: (9.0,3.0)
+  | (y=7.0 ht=1) DCA: (6.0,7.0)
+  | | (x=8.0 ht=0) BWI: (8.0,8.0)
+insert(ORD): successful {Chicago, (2.0,6.0)}
+Preorder list:
+  (x=5.0 ht=3) SEA: (5.0,5.0)
+  (y=4.0 ht=2) IAD: (3.0,4.0)
+  (x=4.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (y=8.0 ht=1) DFW: (3.0,8.0)
+  (x=2.0 ht=0) ORD: (2.0,6.0)
+  []
+  []
+  []
+  (y=7.0 ht=1) DCA: (6.0,7.0)
+  (y=3.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  (x=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | (x=4.0 ht=0) LAX: (4.0,2.0)
+  | (y=4.0 ht=2) IAD: (3.0,4.0)
+  | | | (x=2.0 ht=0) ORD: (2.0,6.0)
+  | | (y=8.0 ht=1) DFW: (3.0,8.0)
+  (x=5.0 ht=3) SEA: (5.0,5.0)
+  | | (y=3.0 ht=0) JFK: (9.0,3.0)
+  | (y=7.0 ht=1) DCA: (6.0,7.0)
+  | | (x=8.0 ht=0) BWI: (8.0,8.0)
+insert(SFO): successful {San Francisco, (1.0,9.0)}
+Preorder list:
+  (x=5.0 ht=3) SEA: (5.0,5.0)
+  (y=4.0 ht=2) IAD: (3.0,4.0)
+  (x=4.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (y=8.0 ht=1) DFW: (3.0,8.0)
+  (x=2.0 ht=0) ORD: (2.0,6.0)
+  []
+  []
+  (x=1.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  (y=7.0 ht=1) DCA: (6.0,7.0)
+  (y=3.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  (x=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | (x=4.0 ht=0) LAX: (4.0,2.0)
+  | (y=4.0 ht=2) IAD: (3.0,4.0)
+  | | | (x=2.0 ht=0) ORD: (2.0,6.0)
+  | | (y=8.0 ht=1) DFW: (3.0,8.0)
+  | | | (x=1.0 ht=0) SFO: (1.0,9.0)
+  (x=5.0 ht=3) SEA: (5.0,5.0)
+  | | (y=3.0 ht=0) JFK: (9.0,3.0)
+  | (y=7.0 ht=1) DCA: (6.0,7.0)
+  | | (x=8.0 ht=0) BWI: (8.0,8.0)
+[This results in rebuilding the subtree rooted at IAD]
+insert(ATL): successful {Atlanta, (1.0,5.0)}
+Preorder list:
+  (x=5.0 ht=3) SEA: (5.0,5.0)
+  (y=6.0 ht=2) ORD: (2.0,6.0)
+  (y=4.0 ht=1) IAD: (3.0,4.0)
+  (x=4.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (x=1.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (x=3.0 ht=1) DFW: (3.0,8.0)
+  (y=9.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  []
+  (y=7.0 ht=1) DCA: (6.0,7.0)
+  (y=3.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  (x=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | | (x=4.0 ht=0) LAX: (4.0,2.0)
+  | | (y=4.0 ht=1) IAD: (3.0,4.0)
+  | | | (x=1.0 ht=0) ATL: (1.0,5.0)
+  | (y=6.0 ht=2) ORD: (2.0,6.0)
+  | | | (y=9.0 ht=0) SFO: (1.0,9.0)
+  | | (x=3.0 ht=1) DFW: (3.0,8.0)
+  (x=5.0 ht=3) SEA: (5.0,5.0)
+  | | (y=3.0 ht=0) JFK: (9.0,3.0)
+  | (y=7.0 ht=1) DCA: (6.0,7.0)
+  | | (x=8.0 ht=0) BWI: (8.0,8.0)
+size: 10
+clear: successful
+insert(ATL): successful {Atlanta, (1.0,5.0)}
+Preorder list:
+  (x=1.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+Tree structure:
+  (x=1.0 ht=0) ATL: (1.0,5.0)
+insert(SFO): successful {San Francisco, (1.0,9.0)}
+Preorder list:
+  (x=1.0 ht=1) ATL: (1.0,5.0)
+  []
+  (y=9.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+Tree structure:
+  (x=1.0 ht=1) ATL: (1.0,5.0)
+  | (y=9.0 ht=0) SFO: (1.0,9.0)
+[This results in rebuilding the subtree rooted at ATL]
+insert(ORD): successful {Chicago, (2.0,6.0)}
+Preorder list:
+  (x=1.0 ht=1) SFO: (1.0,9.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=6.0 ht=0) ORD: (2.0,6.0)
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=0) ATL: (1.0,5.0)
+  (x=1.0 ht=1) SFO: (1.0,9.0)
+  | (y=6.0 ht=0) ORD: (2.0,6.0)
+insert(IAD): successful {Dulles, (3.0,4.0)}
+Preorder list:
+  (x=1.0 ht=2) SFO: (1.0,9.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=6.0 ht=1) ORD: (2.0,6.0)
+  (x=3.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=0) ATL: (1.0,5.0)
+  (x=1.0 ht=2) SFO: (1.0,9.0)
+  | | (x=3.0 ht=0) IAD: (3.0,4.0)
+  | (y=6.0 ht=1) ORD: (2.0,6.0)
+insert(DFW): successful {Dallas-Fort Worth, (3.0,8.0)}
+Preorder list:
+  (x=1.0 ht=2) SFO: (1.0,9.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=6.0 ht=1) ORD: (2.0,6.0)
+  (x=3.0 ht=0) IAD: (3.0,4.0)
+  []
+  []
+  (x=3.0 ht=0) DFW: (3.0,8.0)
+  []
+  []
+Tree structure:
+  | (y=5.0 ht=0) ATL: (1.0,5.0)
+  (x=1.0 ht=2) SFO: (1.0,9.0)
+  | | (x=3.0 ht=0) IAD: (3.0,4.0)
+  | (y=6.0 ht=1) ORD: (2.0,6.0)
+  | | (x=3.0 ht=0) DFW: (3.0,8.0)
+[This results in rebuilding the subtree rooted at SFO]
+insert(LAX): successful {Los Angeles, (4.0,2.0)}
+Preorder list:
+  (x=3.0 ht=2) IAD: (3.0,4.0)
+  (y=6.0 ht=1) ORD: (2.0,6.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=9.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  (y=8.0 ht=1) DFW: (3.0,8.0)
+  (y=2.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  []
+Tree structure:
+  | | (y=5.0 ht=0) ATL: (1.0,5.0)
+  | (y=6.0 ht=1) ORD: (2.0,6.0)
+  | | (y=9.0 ht=0) SFO: (1.0,9.0)
+  (x=3.0 ht=2) IAD: (3.0,4.0)
+  | | (y=2.0 ht=0) LAX: (4.0,2.0)
+  | (y=8.0 ht=1) DFW: (3.0,8.0)
+[This results in rebuilding the subtree rooted at DFW]
+insert(SEA): successful {Seattle, (5.0,5.0)}
+Preorder list:
+  (x=3.0 ht=2) IAD: (3.0,4.0)
+  (y=6.0 ht=1) ORD: (2.0,6.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=9.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  (y=5.0 ht=1) SEA: (5.0,5.0)
+  (x=4.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (x=3.0 ht=0) DFW: (3.0,8.0)
+  []
+  []
+Tree structure:
+  | | (y=5.0 ht=0) ATL: (1.0,5.0)
+  | (y=6.0 ht=1) ORD: (2.0,6.0)
+  | | (y=9.0 ht=0) SFO: (1.0,9.0)
+  (x=3.0 ht=2) IAD: (3.0,4.0)
+  | | (x=4.0 ht=0) LAX: (4.0,2.0)
+  | (y=5.0 ht=1) SEA: (5.0,5.0)
+  | | (x=3.0 ht=0) DFW: (3.0,8.0)
+insert(DCA): successful {Washington, (6.0,7.0)}
+Preorder list:
+  (x=3.0 ht=3) IAD: (3.0,4.0)
+  (y=6.0 ht=1) ORD: (2.0,6.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=9.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  (y=5.0 ht=2) SEA: (5.0,5.0)
+  (x=4.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (x=3.0 ht=1) DFW: (3.0,8.0)
+  []
+  (x=6.0 ht=0) DCA: (6.0,7.0)
+  []
+  []
+Tree structure:
+  | | (y=5.0 ht=0) ATL: (1.0,5.0)
+  | (y=6.0 ht=1) ORD: (2.0,6.0)
+  | | (y=9.0 ht=0) SFO: (1.0,9.0)
+  (x=3.0 ht=3) IAD: (3.0,4.0)
+  | | (x=4.0 ht=0) LAX: (4.0,2.0)
+  | (y=5.0 ht=2) SEA: (5.0,5.0)
+  | | (x=3.0 ht=1) DFW: (3.0,8.0)
+  | | | (x=6.0 ht=0) DCA: (6.0,7.0)
+[This results in rebuilding the subtree rooted at DFW]
+insert(BWI): successful {Baltimore, (8.0,8.0)}
+Preorder list:
+  (x=3.0 ht=3) IAD: (3.0,4.0)
+  (y=6.0 ht=1) ORD: (2.0,6.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=9.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  (y=5.0 ht=2) SEA: (5.0,5.0)
+  (x=4.0 ht=0) LAX: (4.0,2.0)
+  []
+  []
+  (x=6.0 ht=1) DCA: (6.0,7.0)
+  (y=8.0 ht=0) DFW: (3.0,8.0)
+  []
+  []
+  (y=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | (y=5.0 ht=0) ATL: (1.0,5.0)
+  | (y=6.0 ht=1) ORD: (2.0,6.0)
+  | | (y=9.0 ht=0) SFO: (1.0,9.0)
+  (x=3.0 ht=3) IAD: (3.0,4.0)
+  | | (x=4.0 ht=0) LAX: (4.0,2.0)
+  | (y=5.0 ht=2) SEA: (5.0,5.0)
+  | | | (y=8.0 ht=0) DFW: (3.0,8.0)
+  | | (x=6.0 ht=1) DCA: (6.0,7.0)
+  | | | (y=8.0 ht=0) BWI: (8.0,8.0)
+insert(JFK): successful {New York, (9.0,3.0)}
+Preorder list:
+  (x=3.0 ht=3) IAD: (3.0,4.0)
+  (y=6.0 ht=1) ORD: (2.0,6.0)
+  (y=5.0 ht=0) ATL: (1.0,5.0)
+  []
+  []
+  (y=9.0 ht=0) SFO: (1.0,9.0)
+  []
+  []
+  (y=5.0 ht=2) SEA: (5.0,5.0)
+  (x=4.0 ht=1) LAX: (4.0,2.0)
+  []
+  (x=9.0 ht=0) JFK: (9.0,3.0)
+  []
+  []
+  (x=6.0 ht=1) DCA: (6.0,7.0)
+  (y=8.0 ht=0) DFW: (3.0,8.0)
+  []
+  []
+  (y=8.0 ht=0) BWI: (8.0,8.0)
+  []
+  []
+Tree structure:
+  | | (y=5.0 ht=0) ATL: (1.0,5.0)
+  | (y=6.0 ht=1) ORD: (2.0,6.0)
+  | | (y=9.0 ht=0) SFO: (1.0,9.0)
+  (x=3.0 ht=3) IAD: (3.0,4.0)
+  | | (x=4.0 ht=1) LAX: (4.0,2.0)
+  | | | (x=9.0 ht=0) JFK: (9.0,3.0)
+  | (y=5.0 ht=2) SEA: (5.0,5.0)
+  | | | (y=8.0 ht=0) DFW: (3.0,8.0)
+  | | (x=6.0 ht=1) DCA: (6.0,7.0)
+  | | | (y=8.0 ht=0) BWI: (8.0,8.0)
+size: 10

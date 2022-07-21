@@ -1,0 +1,61 @@
+[This tests insert, preorder, and orthog-range-report]
+initialize: height-difference = 1, bounding-box = [(0.0,0.0),(20.0,20.0)]
+insert(SEA): successful {Seattle, (10.0,11.0)}
+insert(DCA): successful {Washington, (12.0,14.0)}
+insert(ORD): successful {Chicago, (4.0,12.0)}
+insert(BWI): successful {Baltimore, (16.0,17.0)}
+insert(JFK): successful {New York, (18.0,6.0)}
+insert(DFW): successful {Dallas-Fort Worth, (7.0,16.0)}
+insert(IAD): successful {Dulles, (6.0,8.0)}
+insert(SFO): successful {San Francisco, (3.0,18.0)}
+insert(ATL): successful {Atlanta, (2.0,10.0)}
+insert(LAX): successful {Los Angeles, (8.0,4.0)}
+Preorder list:
+  (x=10.0 ht=3) SEA: (10.0,11.0)
+  (y=12.0 ht=2) ORD: (4.0,12.0)
+  (y=8.0 ht=1) IAD: (6.0,8.0)
+  (x=8.0 ht=0) LAX: (8.0,4.0)
+  []
+  []
+  (x=2.0 ht=0) ATL: (2.0,10.0)
+  []
+  []
+  (x=7.0 ht=1) DFW: (7.0,16.0)
+  (y=18.0 ht=0) SFO: (3.0,18.0)
+  []
+  []
+  []
+  (y=14.0 ht=1) DCA: (12.0,14.0)
+  (y=6.0 ht=0) JFK: (18.0,6.0)
+  []
+  []
+  (x=16.0 ht=0) BWI: (16.0,17.0)
+  []
+  []
+Tree structure:
+  | | | (x=8.0 ht=0) LAX: (8.0,4.0)
+  | | (y=8.0 ht=1) IAD: (6.0,8.0)
+  | | | (x=2.0 ht=0) ATL: (2.0,10.0)
+  | (y=12.0 ht=2) ORD: (4.0,12.0)
+  | | | (y=18.0 ht=0) SFO: (3.0,18.0)
+  | | (x=7.0 ht=1) DFW: (7.0,16.0)
+  (x=10.0 ht=3) SEA: (10.0,11.0)
+  | | (y=6.0 ht=0) JFK: (18.0,6.0)
+  | (y=14.0 ht=1) DCA: (12.0,14.0)
+  | | (x=16.0 ht=0) BWI: (16.0,17.0)
+orthog-range-report x=[0.0 .. 20.0] y=[0.0 .. 20.0] :
+  ATL: (2.0,10.0)
+  BWI: (16.0,17.0)
+  DCA: (12.0,14.0)
+  DFW: (7.0,16.0)
+  IAD: (6.0,8.0)
+  JFK: (18.0,6.0)
+  LAX: (8.0,4.0)
+  ORD: (4.0,12.0)
+  SEA: (10.0,11.0)
+  SFO: (3.0,18.0)
+orthog-range-report x=[4.0 .. 10.0] y=[4.0 .. 10.0] :
+  IAD: (6.0,8.0)
+  LAX: (8.0,4.0)
+orthog-range-report x=[13.0 .. 14.0] y=[13.0 .. 14.0] :
+  [Empty]
